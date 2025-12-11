@@ -17,7 +17,7 @@
 
 ## #️⃣Weight Grid
 - A 4×4 Grid used to configure the machine for detection of a particular pattern.
-- Uses AND Gates with the the inputs along with a binarhy weight pin.
+- Uses AND Gates with the the inputs along with a binary weight pin.
 - It acts as a filter, and only allows the input to the output side only if the corresponding weight is 1/High and don't allow the rest.
 - W<sub>rc</sub> is the weight grid element, where 4&le;r&le;0 and 4&le;c&le;0.
 
@@ -43,5 +43,6 @@
 ## ⚠️Limitations
 - It also recognizes the sub-patterns or the garbage patterns of the Weight grid.
 - Looks for perfect equivalence.
+
 
 
