@@ -9,6 +9,7 @@
     <p>Detector recognizes alphabet T </p>
 </div>
 
+
 <div align="center">
     <img src="Detector_v0.0/Images/Pattern-Recognition-1.png" 
          alt="Pattern Detector Output" 
