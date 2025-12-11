@@ -12,13 +12,19 @@
 
 ## Input Grid
 - A 4×4 Grid used to input the pattern which is visible through the LED Grid.
-- A<sub>rc</sub> is the Input grid element, where 4&le;r&le;0 and 4&le;c&le;0
+- A<sub>rc</sub> is the Input grid element, where 4&le;r&le;0 and 4&le;c&le;0.
 - A-W Link exists between each individual element of input grid to the element of weight grid, A<sub>rc</sub>-W<sub>rc</sub>.
 
 ## Weight Grid
 - A 4×4 Grid used to configure the machine for detection of a particular pattern.
+- Uses AND Gates with the the inputs along with a binarhy weight pin.
 - It acts as a filter, and only allows the input to the output side only if the corresponding weight is 1/High and don't allow the rest.
-- W<sub>rc</sub> is the weight grid element, where 4&le;r&le;0 and 4&le;c&le;0
+- W<sub>rc</sub> is the weight grid element, where 4&le;r&le;0 and 4&le;c&le;0.
 
 ## Output Grid
-- A 4×4 grid that shows output, that is equal to O<sub>rc</sub> = A<sub>rc</sub> × W<sub>rc</sub>
+- A 4×4 grid that shows output, that is equal to O<sub>rc</sub> = A<sub>rc</sub> × W<sub>rc</sub>.
+
+## Decision Maker
+- A 4×4 grid made up od XNOR gates that checks for exact equivalence between input pattern and the output pattern
+- Outputs **Recognized** if the input pattern A<sub>rc</sub> &subseteq; W<sub>rc</sub>.
+- Outputs **Not Recognized** if the input pattern A<sub>rc</sub> &nsubseteq; W<sub>rc</sub>.
