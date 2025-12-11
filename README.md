@@ -5,13 +5,13 @@
 <div align="center">
     <img src="Detector_v0.0/Images/Pattern-Recognition-2.png" 
          alt="Pattern Detector Output" 
-         width="800">
-    <p>Detector recognizes pattern T </p>
+         width="1000">
+    <p>Detector recognizes alphabet T </p>
 </div>
 
 <div align="center">
-    <img src="Detector_v0.0/Images/Pattern-Recognition-21.png" 
+    <img src="Detector_v0.0/Images/Pattern-Recognition-1.png" 
          alt="Pattern Detector Output" 
-         width="800">
-    <p>Detector doesn't recognizes pattern I </p>
+         width="1000">
+    <p>Detector doesn't recognizes alphabet I </p>
 </div>
