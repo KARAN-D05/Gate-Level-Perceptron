@@ -11,8 +11,8 @@
 
 
 ## 🧱 Versions Built
-- [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are in boundary set up by weights-grid.
-- [Detector v0.1](Detector_v0.1) -> Recognizes only the selected pattern on the weight-grid.
+- [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are inside the boundary set up by weights-grid.
+- [Detector v0.1](Detector_v0.1) -> Recognizes the pattern and super-patterns if they are outside the boundary set up by weights-grid.
 
 ## 🔜 Future Versions
 - Popcount based judgement instead of perfect equivalence check.
