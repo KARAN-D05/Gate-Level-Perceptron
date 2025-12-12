@@ -6,7 +6,7 @@
     <img src="Detector_v0.0/Images/Pattern-Recognition-2.png" 
          alt="Pattern Detector Output" 
          width="1000">
-    <p>Detector recognizes alphabet T ✅ </p>
+    <p>Detector_v0.0 recognizes alphabet T ✅ </p>
 </div>
 
 
