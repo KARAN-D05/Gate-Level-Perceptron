@@ -43,6 +43,4 @@
 ## ⚠️Limitations
 - It also recognizes the sub-patterns or the garbage patterns of the Weight grid.
 - Looks for perfect equivalence.
-
-
-
+- I tried to make a self-learning unit inspired by Rosenblatt’s perceptron, but since my weights were binary instead of analog, it basically became a pixel filter 😂. Next version: popcount-based judgment system!
