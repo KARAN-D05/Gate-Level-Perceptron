@@ -11,9 +11,10 @@
 
 
 ## 🧱 Versions Built
-- [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are inside the boundary set up by weights-grid.
-- [Detector v0.1](Detector_v0.1) -> Recognizes the pattern and super-patterns if they are outside the boundary set up by weights-grid.
-- [Detector v0.2](Detector_v0.2) -> Classifies the sub-pattern, super-pattern, anti-pattern and equivalence precisely through a 2-POV logical analysis.
+- Version 0: A pattern relation analyzer that classifies how an input pattern relates to a stored pattern, enforces logical analysis rather than learning.
+  - [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are inside the boundary set up by weights-grid.
+  - [Detector v0.1](Detector_v0.1) -> Recognizes the pattern and super-patterns if they are outside the boundary set up by weights-grid.
+  - [Detector v0.2](Detector_v0.2) -> Classifies the sub-pattern, super-pattern, anti-pattern and equivalence precisely through a 2-POV logical analysis.
 
 ## 🔜 Future Versions
 - Popcount based judgement instead of perfect equivalence check.
