@@ -9,6 +9,14 @@
   Detector does not recognizes sub-pattern
 </p>
 
+<p align="center">
+  <img src="Images/super-pattern recognition.png" alt="Pattern Detector_v0.1 Output" width="1000">
+</p>
+
+<p align="center">
+  Detector recognizes super-pattern
+</p>
+
 ## 🔲Input Grid
 - A 4×4 Grid used to input the pattern which is visible through the LED Grid.
   - A<sub>rc</sub> is the Input grid element, where 3&le;r&le;0 and 3&le;c&le;0.
@@ -45,6 +53,7 @@
 </p>
 
 <p align="center">
-  Detector recognizes pattern
+  Detector recognizes equivalent pattern
 </p>
+
 
