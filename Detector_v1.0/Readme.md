@@ -47,7 +47,7 @@
 </p>
 
 ## ⚖️ XNOR Equivalence Grid
-- It is a 4×4 grid made up of 16 XNOR logic gates, each gate performs: ` A<sub>rc</sub> ⊙ O<sub>rc</sub> `​
+- It is a 4×4 grid made up of 16 XNOR logic gates, each gate performs: A<sub>rc</sub> ⊙ O<sub>rc</sub>​
 - A<sub>rc</sub> -> Input Grid
 - O<sub>rc</sub> -> Reference Grid
 - XNOR gate goes high if both of its inputs are equal hence a pixel match.
@@ -56,7 +56,3 @@
 ## 💡One Step Closer to Self Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they indentify the correct threshold for identification.
-
-
-
-
