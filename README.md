@@ -24,4 +24,4 @@
 
  ## 🛠️Current Development:
  - Population Counter Developed and operation verified ✓
- - Working on a Comparator for Measuring the Pop-count(M) to compare with the threshold(θ) to make decisions
+ - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
