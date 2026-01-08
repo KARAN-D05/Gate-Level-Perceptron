@@ -1,5 +1,6 @@
 # 📊 POP-Count Based Detector-V1.0
 - It recognizes the pattern if the number of `Matched Pixels (M)` are greater than the set `Threshold(θ)`
+- Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
@@ -46,8 +47,12 @@
 </p>
 
 ## ⚖️ XNOR Equivalence Grid
-- It is a 4×4 grid made up of 16 X-NOR logic gates, each gate performs: `A<sub>rc</sub> ⊙ O<sub>rc</sub>​`
+- It is a 4×4 grid made up of 16 XNOR logic gates, each gate performs: A<sub>rc</sub> ⊙ O<sub>rc</sub>​
 - A<sub>rc</sub> -> Input Grid
 - O<sub>rc</sub> -> Reference Grid
 - XNOR gate goes high if both of its inputs are equal hence a pixel match.
 - Ouptuts of the grid are fed into the population counter, which counts the total number of matched pixels.
+
+## 💡One Step Closer to Self Learning Machines.....
+- Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
+- It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they indentify the correct threshold for identification.
