@@ -6,10 +6,11 @@
    - **👥 Population Counter:**
 
   <p align="center">
-  <img src="images/Population Counter.png" alt="Population Counter" width="1200">
+     <img src="images/Population Counter.png" alt="Population Counter" width="1200">
      
      - It is a module made up of 60 Half-adders, that counts total number of it's inputs that are 1.
      - 
   
+
 
 
