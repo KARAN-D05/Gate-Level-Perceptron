@@ -21,5 +21,7 @@
 
 ## 🔜 Future Versions
 - Popcount based judgement instead of perfect equivalence check.
-   - Developed the structural block-diagram of the Pop-count based judgement pattern detector
-   - Working on population counter for calculating total number of matched-pixels
+
+ ## 🛠️Current Development:
+ - Population Counter Developed and operation verified
+ - Working on a Comparator for Measuring the Pop-count(M) to compare with the threshold(θ) to make decisions
