@@ -7,7 +7,7 @@
 - It is based on principle of succesively adding bits of same Weight until we have compressed that set of bits with same weight W into a single bit of weight W
 - A half adder has two outputs, SUM and CARRY, if weight of output of SUM is W then weight of output of CARRY is 2W
 - It can also be implemented using a full-adder which will lead to same compression employing less number of full-adders than half-adders
-  - **Logical Implementation:**
+    - **Logical Implementation:**
         <p>➤ 8 Half-adders divides the 16 inputs into 8 SUM bits of weight 1 and 8 CARRY bits of weight 2 </p> 
         <p>➤ Then we use 4 half-adders to further divide 8 SUM bits of weight 1 into 4 SUM bits and 4 CARRY bits </p>
         <p>➤ As we keep dividing the SUM bits of weight 1 until we are left with a single bit of Weight 1 </p>
@@ -33,7 +33,7 @@
 </p>
 
 <p align="center">
-  0 = 7 & M = 8, M > θ: hence Pattern is recognized
+  θ = 7 & M = 8, M > θ: hence Pattern is recognized
 </p>
 
 <p align="center">
@@ -41,10 +41,11 @@
 </p>
 
 <p align="center">
-  0 = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
+  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
 </p>
 
 ## ⚖️ X-NOR Equivalence Grid
 - 
+
 
 
