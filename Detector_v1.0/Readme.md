@@ -26,9 +26,9 @@
    - `Pattern Not Recognized: M ≤ θ`
 - Threshold can be set using the T-pins or the Threshold pins, threshold range from 0(0000) - 15 (1111)
 - It is essentially a Comparator that goes high if M is greater than θ
-
-   - Se
-
+ - **Setting the Threshold(θ):** Use T-pins/Threshold pins to set the threshold as required: (T8 T4 T2 T1), eg:1001 sets the threshold to 9
+ - Threshold can be changed and is not fixed, thus giving us the ability to change it accordingly
+  
 <p align="center">
   <img src="images/Recognition.png" alt="Recognition" width="1000">
 </p>
@@ -45,9 +45,9 @@
   θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
 </p>
 
-## ⚖️ X-NOR Equivalence Grid
-- 
-
-
-
-
+## ⚖️ XNOR Equivalence Grid
+- It is a 4×4 grid made up of 16 X-NOR logic gates, each gate performs: `A<sub>rc</sub> ⊙ O<sub>rc</sub>​`
+- A<sub>rc</sub> -> Input Grid
+- O<sub>rc</sub> -> Reference Grid
+- XNOR gate goes high if both of its inputs are equal hence a pixel match.
+- Ouptuts of the grid are fed into the population counter, which counts the total number of matched pixels.
