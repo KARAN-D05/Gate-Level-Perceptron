@@ -20,7 +20,7 @@
   - [Detector v0.2](Detector_v0.2) -> Classifies the input as a sub-pattern, super-pattern, anti-pattern or equivalence precisely through a 2-POV logical analysis.
 
 - **Version 1**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check, takes us one step closer to self-learning machines.
-  -[Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold. 
+  - [Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold. 
 
 ## 🔜 Future Versions
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
