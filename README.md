@@ -6,7 +6,7 @@
 - Subsequent versions will transition from rigid equivalence checks to popcount-based scoring and threshold decisions, moving the architecture toward a true perceptron and, eventually self learning behaviour.
 
 <div align="center">
-    <img src="Detector_v1.0/Images/Recognition.png" 
+    <img src="Detector_v1.0/images/Recognition.png" 
          alt="Pattern Detector Output" 
          width="1000">
     <p> Detector_v1.0 Pop-count based judgement ✅ </p>
