@@ -25,7 +25,7 @@
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
-- It is a module made up of 60 Half-adders, that counts total number of it's inputs that are 1
+- It is a module made up of 64 Half-adders, that counts total number of it's inputs that are 1
 - It is based on principle of successively adding bits of same Weight until we have compressed that set of bits with same weight W into a single bit of weight W
 - A half adder has two outputs, SUM and CARRY, if weight of output of SUM is W then weight of output of CARRY is 2W
 - It can also be implemented using full-adders which will lead to same compression employing less number of full-adders than half-adders
@@ -77,3 +77,4 @@
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they identify the correct threshold for recognition.
+
