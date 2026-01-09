@@ -47,7 +47,7 @@
    - `Pattern Recognized: M > θ`
    - `Pattern Not Recognized: M ≤ θ`
 - Threshold can be set using the T-pins or the Threshold pins, threshold range from 0(0000) - 15 (1111)
-- It is essentially a Comparator that goes high if M is greater than θ
+- It is essentially a Priority-Encoded Magnitude Comparator that goes high if M is greater than θ
  - **Setting the Threshold(θ):** Use T-pins/Threshold pins to set the threshold as required: (T8 T4 T2 T1), eg:1001 sets the threshold to 9
  - Threshold is not fixed, thus giving us the ability to adjust it accordingly
   
