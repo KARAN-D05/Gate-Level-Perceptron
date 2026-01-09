@@ -20,7 +20,7 @@
    - 16 Inputs from XNOR grid to pop-counter is biologically equivalent to the Dendrites
    - The POP-Counter is biologically equivalent to the Cell Body
    - Decision-Maker is biologically equivalent to the electrical signal sent or not based on threshold  
-- Even though my machine fires/recognize if M is strictly greater than 0, for ensuring more confidence during pattern recognition.
+- Even though my machine fires/recognize if M is strictly greater than 0, for ensuring more confidence during pattern recognition
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
@@ -76,6 +76,7 @@
 ## 💡One Step Closer to Self Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they indentify the correct threshold for identification.
+
 
 
 
