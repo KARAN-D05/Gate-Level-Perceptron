@@ -4,12 +4,13 @@
 
 ## 🧬 The McCulloch-Pitts Artificial Neuron
 - A simple computational model of a biological neuron
-- Biological neuron:
+- `Biological neuron:`
    - receives inputs via its tree-like projections called dendrites
    - The cell body then performs computation on these inputs
    - Based on results of the computation, it may send an electrical signal through the axon toward axon-terminals which in turn communicate it to other neurons
    - This forms a biological neural network
-- Warren McCulloch and Walter Pitts proposed a simple logical model of a neuron: MCP Neuron
+- `MCP Neuron:`
+   - Warren McCulloch and Walter Pitts proposed a simple logical model of a neuron
    - It sums the inputs say A and B where A,B ∈ {0,1}: M = A + B
    - It has a threshold θ, if:
       - M ≥ θ -> Neuron Fires, Output = 1
@@ -75,4 +76,4 @@
 
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
-- It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they identify the correct threshold for identification.
+- It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they identify the correct threshold for recognition.
