@@ -2,6 +2,9 @@
 - It recognizes the pattern if the number of `Matched Pixels (M)` are greater than the set `Threshold(θ)`
 - Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
 
+## 🧬 The McCulloch-Pitts(MCP) Artificail Neuron
+- A simple computational model of a biological neuron.
+
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
 - It is a module made up of 60 Half-adders, that counts total number of it's inputs that are 1
@@ -56,3 +59,4 @@
 ## 💡One Step Closer to Self Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they indentify the correct threshold for identification.
+
