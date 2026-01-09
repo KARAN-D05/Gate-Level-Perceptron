@@ -3,7 +3,24 @@
 - Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
 
 ## 🧬 The McCulloch-Pitts Artificail Neuron
-- A simple computational model of a biological neuron.
+- A simple computational model of a biological neuron
+- `Biological neuron:`
+   - receives inputs via its tree-like projections called dendrites
+   - The cell body then performs computation on these inputs
+   - Based on results of the computation, it may send an electrical signal through axon towards axon-terminals which in turn communicates it to other neurons
+   - This forms a biological neural network
+- Warren McCulloch and Walter Pitts proposed a simple logical model of a neuron: `MCP Neuron`
+   - It sums the inputs say A and B where A,B ∈ {0,1}: M = A + B
+   - It has a threshold (θ), if:
+      - M ≥ θ -> Neuron Fires, Ouput = 1
+      - M < θ -> Neuron Don't Fires, Output = 0
+   - Based on the value of θ, we can implement any logic gate like AND, OR
+   - For AND gate θ = 2, so the neuron will only output 1 if both the inputs are 1. ( 1(A) + 1(B) ≥ 2(0) ), similarly for OR gate 0 = 1
+- The POP-Count based Detector's sub-system consisting of Pop-counter, Threshold pins, Decision-Maker is isomorphic to the MCP Neuron
+   - 16 Inputs from XNOR grid to pop-counter is biologically equivalent to the Dendrites
+   - The POP-Counter is biologically equivalent to the Cell Body
+   - Decision-Maker is biologically equivalent to the electrical signal sent or not based on threshold  
+- Even though my machine fires/recognize if M is strictly greater than 0, for ensuring more confidence during pattern recognition.
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
@@ -59,5 +76,6 @@
 ## 💡One Step Closer to Self Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they indentify the correct threshold for identification.
+
 
 
