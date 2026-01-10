@@ -42,6 +42,10 @@
   <img src="images/Population Counter.png" width="1500">
 </p>
 
+<p align="center">
+ Wallace Tree Based Population Counter - Parallel Reduction of Multiple Bits
+</p>
+
 ## 🏛️ Decision-Maker
 - It is the brain of the machine, it decides if the input pattern is recognized or not.
 - For pattern recognition the total number of matched pixels(M) should be strictly greater than the threshold(θ)
@@ -78,5 +82,6 @@
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they identify the correct threshold for recognition.
+
 
 
