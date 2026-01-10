@@ -20,7 +20,8 @@
 - The POP-Count based Detector's subsystem consisting of Pop-counter, Threshold pins, Decision-Maker is isomorphic to the MCP Neuron
    - 16 Inputs from XNOR grid to pop-counter is biologically equivalent to the Dendrites
    - The POP-Counter is biologically equivalent to the Cell Body
-   - Decision-Maker is biologically equivalent to whether an electrical signal is sent or not based on the threshold  
+   - Decision-Maker is biologically equivalent to whether an electrical signal is sent or not based on the threshold
+   - The Output LED is biologically equivalent to the axon
 - Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during pattern recognition
 
 ## 👥 Population Counter
@@ -77,4 +78,5 @@
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they identify the correct threshold for recognition.
+
 
