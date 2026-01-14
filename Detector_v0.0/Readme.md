@@ -1,5 +1,5 @@
 # 🕵️‍♂️ Detector-V0.0
-- A primitive, configurable pattern detection machine built entirely from logic gates. It uses a weight array to filter the input pattrn and a decision-making stage to check recognition. 
+- A primitive, configurable pattern detection machine built entirely from logic gates. It uses a weight array to filter the input pattern and a decision-making stage to check recognition. 
 
 <p align="center">
   <img src="Images/Pattern-Recognition-2.png" alt="Pattern Detector Output" width="1000">
@@ -55,3 +55,4 @@
 - Looks for perfect equivalence between input and filtered output.
 - No scoring or noise tolerance - expects clean inputs.
 - My attempt at a perceptron ended up as a binary pixel filter + comparator. **Basically v0.0 is a machine the George Orwell's 1984 Thought Police would approve of 😂**.
+
