@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/waveform.png" alt="Pattern Detector_v0.1 Output" width="25000">
+  <img src="images/waveform.png" alt="Pattern Detector_v0.1 Output" width="2500">
 </p>
 
 <p align="center">
@@ -13,4 +13,5 @@
 <p align="center">
     Detector recognizes Equivalence & super-pattern
 </p>
+
 
