@@ -12,7 +12,6 @@
     <p> Detector_v1.0 Pop-count based judgement ✅ </p>
 </div>
 
-
 ## 🧱 Versions Built
 - **Version 0**: A pattern relation analyzer that classifies how an input pattern relates to a stored pattern, enforces rule based recognition rather than learning.
   - [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are inside the boundary set up by weights-grid.
@@ -25,6 +24,13 @@
 ## 💻 Verilog Implementation
 - [Detector_v0.0](Detector_v0.0/Verilog-Implementation)
 - [Detector_v0.1](Detector_v0.1/Verilog-Implementation)
+
+<div align="center">
+    <img src="Detector_v0.0/Verilog-Implementation/images/Waveform.png" 
+         alt="Pattern Detector Output" 
+         width="1000">
+    <p> Detector_v0.0 Testbench Waveform </p>
+</div>
 
 ## 🔜 Future Versions
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
