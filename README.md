@@ -33,7 +33,7 @@
 </div>
 
 <div align="center">
-    <img src="Detector_v0.1/Verilog-Implementation/images/Waveform.png" 
+    <img src="Detector_v0.1/Verilog-Implementation/images/waveform.png" 
          alt="Pattern Detector Output" 
          width="1500">
     <p> Detector_v0.1 Testbench Waveform </p>
