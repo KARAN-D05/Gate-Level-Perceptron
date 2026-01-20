@@ -11,5 +11,6 @@
 </p>
 
 <p align="center">
-  Detector recognize alphabet Equivalence & Sub-Patterns
+  Detector recognizes Equivalence & Sub-Patterns
 </p>
+
