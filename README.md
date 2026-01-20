@@ -23,7 +23,6 @@
 
 ## 💻 Verilog Implementation
 - [Detector_v0.0](Detector_v0.0/Verilog-Implementation)
-- [Detector_v0.1](Detector_v0.1/Verilog-Implementation)
 
 <div align="center">
     <img src="Detector_v0.0/Verilog-Implementation/images/Waveform.png" 
@@ -31,6 +30,8 @@
          width="1500">
     <p> Equivalence & Sub-Pattern Recognition 🔹 </p>
 </div>
+
+- [Detector_v0.1](Detector_v0.1/Verilog-Implementation)
 
 <div align="center">
     <img src="Detector_v0.1/Verilog-Implementation/images/waveform.png" 
