@@ -28,7 +28,7 @@
 <div align="center">
     <img src="Detector_v0.0/Verilog-Implementation/images/Waveform.png" 
          alt="Pattern Detector Output" 
-         width="1000">
+         width="1500">
     <p> Detector_v0.0 Testbench Waveform </p>
 </div>
 
