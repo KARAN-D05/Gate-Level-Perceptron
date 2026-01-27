@@ -40,6 +40,15 @@
     <p> Equivalence & Super-Pattern Recognition 🟦 </p>
 </div>
 
+- [Detector_v0.2](Detector_v0.2/Verilog-Implementation)
+
+<div align="center">
+    <img src="Detector_v0.2/Verilog-Implementation/images/waveform.png" 
+         alt="Pattern Detector Output" 
+         width="1500">
+    <p> Equivalence & Super $ Sub & Anti Pattern Recognition 🔹🟦 </p>
+</div>
+
 ## 🔜 Future Versions
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an apropriate threshold.
