@@ -46,7 +46,7 @@
     <img src="Detector_v0.2/Verilog-Implementation/images/waveform.png" 
          alt="Pattern Detector Output" 
          width="1500">
-    <p> Equivalence & Super $ Sub & Anti Pattern Recognition 🔹🟦 </p>
+    <p> Equivalence & Super & Sub & Anti Pattern Recognition 🔹🟦 </p>
 </div>
 
 ## 🔜 Future Versions
