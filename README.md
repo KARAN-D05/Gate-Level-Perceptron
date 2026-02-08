@@ -9,7 +9,14 @@
     <img src="Detector_v1.0/images/Recognition.png" 
          alt="Pattern Detector Output" 
          width="1000">
-    <p> Detector_v1.0 Pop-count based judgement ✅ </p>
+    <p>  θ = 7 & M = 8, M > θ: hence Pattern is recognized ✅ </p>
+</div>
+
+<div align="center">
+    <img src="Detector_v1.0/images/Non-Recognition.png" 
+         alt="Pattern Detector Output" 
+         width="1000">
+    <p>   θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌ </p>
 </div>
 
 ## 🧱 Versions Built
