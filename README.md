@@ -65,4 +65,8 @@
  - Population Counter Developed and operation verified ✓
  - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
  - Pop-Count based pattern detector developed and tested ✓
- - Detector Version 0 series implemented in Verilog ✓ 
+ - Detector Version 0 series implemented in Verilog ✓
+
+## 📜License
+- Source code and HDL files are licensed under the MIT License.
+- Documentation, diagrams, and images are licensed under CC BY 4.0.
