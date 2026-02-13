@@ -59,7 +59,7 @@
 ## 🔜 Future Versions
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an apropriate threshold.
-- It would form basis of simple self-learning perceptron style system. 
+- It would form basis of simple self-learning adaptive system. 
 
 ## 🛠️Current Development:
  - Population Counter Developed and operation verified ✓
