@@ -19,6 +19,10 @@
     <p>   θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌ </p>
 </div>
 
+## ⚙️ Implementation Stack
+![Verilog](https://img.shields.io/badge/Verilog-FFEA00?style=for-the-badge&logoColor=black)
+![Logisim Circuits](https://img.shields.io/badge/Logisim%20Circuits-00C853?style=for-the-badge)
+
 ## 🧱 Versions Built
 - **`Version 0`**: A pattern relation analyzer that classifies how an input pattern relates to a stored pattern, enforces rule based recognition rather than learning.
   - [Detector_v0.0](Detector_v0.0) -> Recognizes the pattern and sub-patterns if they are inside the boundary set up by weights-grid.
