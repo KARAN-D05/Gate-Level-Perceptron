@@ -7,9 +7,9 @@
 
 <div align="center">
     <img src="Detector_v1.0/images/Block-Diagram.png" 
-         alt="Bloack-Diagram" 
+         alt="Block-Diagram" 
          width="1500">
-    <p> Block-Diagram -> Detectorv-1.0 </p>
+    <p> Block-Diagram -> Detector-v1.0 </p>
 </div>
 
 ## ⚙️ Implementation Stack
@@ -24,6 +24,22 @@
 
 - **`Version 1`**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check, takes us one step closer to self-learning adaptive machines.
   - [Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold. 
+
+<p align="center">
+  <img src="Detector-v1.0/images/Recognition.png" alt="Recognition" width="900">
+</p>
+
+<p align="center">
+  θ = 7 & M = 8, M > θ: hence Pattern is recognized
+</p>
+
+<p align="center">
+  <img src="Detector-v1.0images/Non-Recognition.png" alt="Non-Recognition" width="900">
+</p>
+
+<p align="center">
+  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
+</p>
 
 ## 💻 Verilog Implementation
 - [Detector_v0.0](Detector_v0.0/Verilog-Implementation)
