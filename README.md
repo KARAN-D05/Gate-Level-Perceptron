@@ -3,7 +3,6 @@
     <img src="Detector_v1.0/images/Block-Diagram.png" 
          alt="Bloack-Diagram" 
          width="1500">
-    <p> 🛠️ Functional Block Diagram - Detector-v1.0</p>
 </div>
 
 - This project explores pattern recognition at logic-gate level.
