@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  θ = 7 & M = 8, M > θ: hence Pattern is recognized
+  θ = 7 & M = 8, M > θ: hence Pattern is recognized ✅
 </p>
 
 <p align="center">
@@ -18,14 +18,14 @@
 </p>
 
 <p align="center">
-  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
+  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌
 </p>
 
 <div align="center">
     <img src="Detector_v1.0/images/Block-Diagram.png" 
          alt="Block-Diagram" 
          width="1500">
-    <p> Block-Diagram - Detector-v1.0 </p>
+    <p> Block-Diagram 🧱 </p>
 </div>
 
 ## ⚙️ Implementation Stack
