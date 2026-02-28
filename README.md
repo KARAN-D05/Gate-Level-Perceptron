@@ -1,9 +1,14 @@
 # 🔍 Gate Level Perceptron
 - This project explores pattern recognition at logic-gate level.
-
 - It began as an attempt to build **`perceptron-like system`** for recognizing patterns, but early versions evolved into a strictly logical pattern relation anlyzer using strict boolean logic.
-
 - Subsequent versions transitioned from rigid equivalence checks to popcount-based scoring and threshold decisions, moving the architecture toward a true perceptron and, eventually self learning behaviour.
+
+<div align="center">
+    <img src="Detector_v1.0/images/Block-Diagram.png" 
+         alt="Bloack-Diagram" 
+         width="1000">
+    <p>  Functional Block Diagram </p>
+</div>
 
 <div align="center">
     <img src="Detector_v1.0/images/Recognition.png" 
