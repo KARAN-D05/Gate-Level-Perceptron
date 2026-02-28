@@ -5,6 +5,11 @@
   
 - Subsequent versions transitioned from rigid equivalence checks to popcount-based scoring and threshold decisions, moving the architecture toward a true perceptron and, eventually self learning behaviour.
 
+<div align="center">
+    <img src="Detector_v1.0/images/Block-Diagram.png" alt="Block-Diagram" width="1500">
+    <p> Block-Diagram 🧱 </p>
+</div>
+
 <p align="center">
   <img src="Detector_v1.0/images/Recognition.png" alt="Recognition" width="900">
 </p>
@@ -20,13 +25,6 @@
 <p align="center">
   θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌
 </p>
-
-<div align="center">
-    <img src="Detector_v1.0/images/Block-Diagram.png" 
-         alt="Block-Diagram" 
-         width="1500">
-    <p> Block-Diagram 🧱 </p>
-</div>
 
 ## ⚙️ Implementation Stack
 ![Verilog](https://img.shields.io/badge/Verilog-FFEA00?style=for-the-badge&logoColor=black)
