@@ -6,7 +6,7 @@
 <div align="center">
     <img src="Detector_v1.0/images/Block-Diagram.png" 
          alt="Bloack-Diagram" 
-         width="1000">
+         width="1500">
     <p>  Functional Block Diagram </p>
 </div>
 
