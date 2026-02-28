@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="Detector_v1.0images/Non-Recognition.png" alt="Non-Recognition" width="900">
+  <img src="Detector_v1.0/images/Non-Recognition.png" alt="Non-Recognition" width="900">
 </p>
 
 <p align="center">
