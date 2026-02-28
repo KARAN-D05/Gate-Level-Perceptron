@@ -23,6 +23,7 @@
    - Decision-Maker is biologically equivalent to whether an electrical signal is sent or not based on the threshold
    - The Output LED is biologically equivalent to the axon
 - Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during pattern recognition
+- For More about [MCP Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
@@ -82,3 +83,4 @@
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they converge to a threshold that correctly classifies input patterns.
+
