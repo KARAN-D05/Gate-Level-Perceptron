@@ -81,6 +81,23 @@
  - Pop-Count based pattern detector developed and tested ✓
  - Detector Version 0 series implemented in Verilog ✓
 
+## 🛠️ Toolchain
+
+This project includes a built-in reference manual for the detector architecture that can be queried directly from your terminal. View full manual: [detector-manual](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/detector-manual)
+
+**Linux / Mac:**
+```bash
+curl -O https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.sh
+chmod +x run-detector-manual.sh
+./run-detector-manual.sh
+```
+
+**Windows:**
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.ps1" -OutFile "run-detector-manual.ps1"
+powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
+```
+
 ## 📜License
 - Source code and HDL files are licensed under the MIT License.
 - Documentation, diagrams, images, and PDFs are licensed under Creative Commons Attribution 4.0 (CC BY 4.0).
