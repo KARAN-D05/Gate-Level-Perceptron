@@ -26,7 +26,7 @@ echo "[OK] curl found."
 echo ""
 echo "Downloading detector-manual.c from GitHub..."
 curl -fsSL -o detector-manual.c \
-    https://raw.githubusercontent.com/KARAN-D05/Assembler/main/detector-manual/detector-manual.c
+    https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/detector-manual.c
 
 if [ $? -ne 0 ]; then
     echo "[ERROR] Download failed. Check your internet connection."
