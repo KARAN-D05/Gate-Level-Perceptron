@@ -1,4 +1,4 @@
-#!/bin/bas
+#!/bin/bash
 
 echo "+--------------------------------------------------+"
 echo "|       detector-manual - Bash Installer           |"
