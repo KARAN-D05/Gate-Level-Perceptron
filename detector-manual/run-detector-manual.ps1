@@ -17,7 +17,7 @@ Write-Host ""
 Write-Host "Downloading detector-manual.c from GitHub..."
 try {
     Invoke-WebRequest `
-        -Uri "https://raw.githubusercontent.com/KARAN-D05/Assembler/main/detector-manual/detector-manual.c" `
+        -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/detector-manual.c" `
         -OutFile "detector-manual.c" `
         -ErrorAction Stop
     Write-Host "[OK] Download complete."
