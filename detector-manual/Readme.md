@@ -10,7 +10,7 @@ and version history directly from your terminal.
 
 **Step 1 - Download the script**
 ```bash
-curl -O https://raw.githubusercontent.com/KARAN-D05/Assembler/main/detector-manual/run-detector-manual.sh
+curl -O https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.sh
 ```
 
 **Step 2 - Give it permission to execute**
@@ -29,7 +29,7 @@ chmod +x run-detector-manual.sh
 
 **Step 1 - Download the script**
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Assembler/main/detector-manual/run-detector-manual.ps1" -OutFile "run-detector-manual.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.ps1" -OutFile "run-detector-manual.ps1"
 ```
 
 **Step 2 - Run it**
