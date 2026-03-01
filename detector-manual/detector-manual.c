@@ -18,7 +18,7 @@
 //  Project  : Gate Level Perceptron - Pattern Detector
 //  File     : detector-manual.c
 //  Covers   : Detector-V0.0, V0.1, V0.2, V1.0
-//  Author   : KARAN-D05
+//  Author   : Karan Diwan
 //  Date     : 2026
 // ============================================================
 
