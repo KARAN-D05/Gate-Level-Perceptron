@@ -27,6 +27,63 @@
 #include <stdlib.h>
 
 // ─────────────────────────────────────────
+// ANSI COLOR CODES
+// ─────────────────────────────────────────
+
+#define RESET       "\033[0m"
+#define BOLD        "\033[1m"
+#define DIM         "\033[2m"
+#define GREEN       "\033[32m"
+#define YELLOW      "\033[33m"
+#define CYAN        "\033[36m"
+#define BOLD_WHITE  "\033[1;37m"
+#define BOLD_CYAN   "\033[1;36m"
+#define BOLD_YELLOW "\033[1;33m"
+#define BOLD_GREEN  "\033[1;32m"
+#define BOLD_RED    "\033[1;31m"
+
+// ─────────────────────────────────────────
+// PRINT HELPERS
+// ─────────────────────────────────────────
+
+void print_divider() {
+    printf(DIM "+------------------------------------------------------+" RESET "\n");
+}
+
+void print_header(char *title) {
+    print_divider();
+    printf(DIM "|" RESET BOLD_CYAN "  %-52s" RESET DIM "|" RESET "\n", title);
+    print_divider();
+}
+
+void print_section(char *title) {
+    printf("\n" BOLD_WHITE " %s" RESET "\n", title);
+    printf(DIM " ");
+    for (int i = 0; i < (int)strlen(title); i++) printf("-");
+    printf(RESET "\n");
+}
+
+void print_component(int num, char *name) {
+    printf("\n" BOLD_YELLOW " [%d] %s" RESET "\n", num, name);
+}
+
+void print_bullet(char *text) {
+    printf(GREEN "     * " RESET "%s\n", text);
+}
+
+void print_limitation(char *text) {
+    printf(YELLOW "     ! " RESET "%s\n", text);
+}
+
+void print_arrow(char *key, char *value) {
+    printf("       " CYAN "%s" RESET " -> %s\n", key, value);
+}
+
+void print_iso(char *left, char *right) {
+    printf("   " CYAN "%-22s" RESET " <->  %s\n", left, right);
+}
+
+// ─────────────────────────────────────────
 // COMPONENT DATABASE (for search)
 // ─────────────────────────────────────────
 
@@ -166,9 +223,10 @@ void search(char *query) {
 
     int found = 0;
 
-    printf("\n+--------------------------------------------------+\n");
-    printf("  Search results for: %s\n", q);
-    printf("+--------------------------------------------------+\n");
+    printf("\n");
+    print_divider();
+    printf(BOLD_CYAN "  Search results for: %s" RESET "\n", q);
+    print_divider();
 
     for (int i = 0; i < component_count; i++) {
         char name_upper[30];
@@ -187,21 +245,22 @@ void search(char *query) {
             strstr(func_upper, q) ||
             strstr(note_upper, q)) {
 
-            printf("\n  Component : %s\n", components[i].name);
-            printf("  Version   : %s\n",   components[i].version);
-            printf("  Function  : %s\n",   components[i].function);
-            printf("  Notes     : %s\n",   components[i].note);
-            printf("\n  --------------------------------------------------\n");
+            printf("\n");
+            printf(BOLD_YELLOW "  Component" RESET " : " BOLD_WHITE "%s" RESET "\n", components[i].name);
+            printf(CYAN        "  Version  " RESET " : %s\n", components[i].version);
+            printf(            "  Function  : %s\n", components[i].function);
+            printf(DIM         "  Notes     : %s" RESET "\n", components[i].note);
+            printf(DIM "\n  ------------------------------------------------------" RESET "\n");
             found++;
         }
     }
 
     if (found == 0)
-        printf("\n  No results found for '%s'\n", q);
+        printf(BOLD_RED "\n  No results found for '%s'\n" RESET, q);
     else
-        printf("\n  %d result(s) found.\n", found);
+        printf(BOLD_GREEN "\n  %d result(s) found.\n" RESET, found);
 
-    printf("+--------------------------------------------------+\n");
+    print_divider();
 }
 
 // ─────────────────────────────────────────
@@ -210,158 +269,141 @@ void search(char *query) {
 
 void manual_v00() {
     printf("\n");
-    printf("+------------------------------------------------------+\n");
-    printf("|        Detector-V0.0 - Binary Pixel Filter           |\n");
-    printf("+------------------------------------------------------+\n");
+    print_header("Detector-V0.0 - Binary Pixel Filter");
 
-    printf("\n OVERVIEW\n");
-    printf(" --------\n");
+    print_section("OVERVIEW");
     printf(" A primitive configurable pattern detection machine\n");
     printf(" built entirely from logic gates. Uses a weight array\n");
     printf(" to filter the input pattern and a decision-making\n");
     printf(" stage to check for exact recognition.\n");
 
-    printf("\n COMPONENTS\n");
-    printf(" ----------\n");
+    print_section("COMPONENTS");
 
-    printf("\n [1] Input Grid (4x4)\n");
+    print_component(1, "Input Grid (4x4)");
     printf("     Arc is the input grid element.\n");
     printf("     3 <= r <= 0 and 3 <= c <= 0\n");
     printf("     A-W link connects each Arc to its Wrc.\n");
 
-    printf("\n [2] Weight Grid (4x4)\n");
+    print_component(2, "Weight Grid (4x4)");
     printf("     Wrc is the weight grid element.\n");
     printf("     3 <= r <= 0 and 3 <= c <= 0\n");
     printf("     Uses AND gates with binary weight pins.\n");
     printf("     Acts as a filter:\n");
-    printf("       Weight = 1 -> input passes through\n");
-    printf("       Weight = 0 -> input is blocked\n");
+    printf("       " CYAN "Weight = 1" RESET " -> input passes through\n");
+    printf("       " CYAN "Weight = 0" RESET " -> input is blocked\n");
 
-    printf("\n [3] Output Grid (4x4)\n");
+    print_component(3, "Output Grid (4x4)");
     printf("     Orc = Arc AND Wrc\n");
     printf("     Shows filtered result of input through weight.\n");
 
-    printf("\n [4] Decision Maker\n");
+    print_component(4, "Decision Maker");
     printf("     XNOR equivalence check between Input and Output.\n");
     printf("     Check = (A00^O00) AND (A01^O01) AND...AND (A33^O33)\n");
-    printf("     Check = 1 -> Pattern Recognized\n");
-    printf("     Check = 0 -> Pattern Not Recognized\n");
-    printf("\n     Mathematical Behaviour:\n");
+    printf(CYAN "     Check = 1" RESET " -> Pattern Recognized\n");
+    printf(CYAN "     Check = 0" RESET " -> Pattern Not Recognized\n");
+    printf("\n" BOLD_WHITE "     Mathematical Behaviour:\n" RESET);
     printf("       Recognized     : Arc is subset of Wrc\n");
     printf("       Not Recognized : Arc is not subset of Wrc\n");
 
-    printf("\n LIMITATIONS\n");
-    printf(" -----------\n");
-    printf("     * Recognizes sub-patterns and garbage patterns.\n");
-    printf("     * No scoring or noise tolerance.\n");
-    printf("     * Expects perfectly clean inputs.\n");
-    printf("     * Binary pixel filter + comparator only.\n");
+    print_section("LIMITATIONS");
+    print_limitation("Recognizes sub-patterns and garbage patterns.");
+    print_limitation("No scoring or noise tolerance.");
+    print_limitation("Expects perfectly clean inputs.");
+    print_limitation("Binary pixel filter + comparator only.");
 
-    printf("\n+------------------------------------------------------+\n");
+    printf("\n");
+    print_divider();
 }
 
 void manual_v01() {
     printf("\n");
-    printf("+------------------------------------------------------+\n");
-    printf("|      Detector-V0.1 - Super-Pattern Recognition       |\n");
-    printf("+------------------------------------------------------+\n");
+    print_header("Detector-V0.1 - Super-Pattern Recognition");
 
-    printf("\n OVERVIEW\n");
-    printf(" --------\n");
+    print_section("OVERVIEW");
     printf(" Solves the sub-pattern recognition problem of V0.0.\n");
     printf(" Instead recognizes the exact pattern or super-patterns.\n");
     printf(" Single architectural change in the Decision Maker.\n");
 
-    printf("\n COMPONENTS\n");
-    printf(" ----------\n");
+    print_section("COMPONENTS");
     printf(" Input Grid, Weight Grid, Output Grid same as V0.0.\n");
     printf(" Orc = Arc AND Wrc\n");
 
-    printf("\n [4] Decision Maker (changed from V0.0)\n");
+    print_component(4, "Decision Maker (changed from V0.0)");
     printf("     Now checks equivalence between Weight Grid Wrc\n");
     printf("     and Output Grid Orc.\n");
     printf("     (V0.0 checked Input Arc vs Output Orc)\n");
     printf("     Sets a lower bound below which pattern cannot\n");
     printf("     be recognized.\n");
     printf("     Check = (W00^O00) AND (W01^O01) AND...AND (W33^O33)\n");
-    printf("     Check = 1 -> Pattern Recognized\n");
-    printf("     Check = 0 -> Pattern Not Recognized\n");
+    printf(CYAN "     Check = 1" RESET " -> Pattern Recognized\n");
+    printf(CYAN "     Check = 0" RESET " -> Pattern Not Recognized\n");
 
-    printf("\n MATHEMATICAL BEHAVIOUR\n");
-    printf(" ----------------------\n");
-    printf("     Recognized:\n");
+    print_section("MATHEMATICAL BEHAVIOUR");
+    printf(BOLD_WHITE "     Recognized:\n" RESET);
     printf("       Orc = Wrc\n");
     printf("       Orc is subset of Arc\n");
     printf("       Wrc is subset of Arc\n");
-    printf("     Not Recognized:\n");
+    printf(BOLD_WHITE "     Not Recognized:\n" RESET);
     printf("       Orc != Wrc\n");
     printf("       Orc is not subset of Arc\n");
     printf("       Wrc is not subset of Arc\n");
 
-    printf("\n+------------------------------------------------------+\n");
+    printf("\n");
+    print_divider();
 }
 
 void manual_v02() {
     printf("\n");
-    printf("+------------------------------------------------------+\n");
-    printf("|       Detector-V0.2 - Four-Way Pattern Classifier    |\n");
-    printf("+------------------------------------------------------+\n");
+    print_header("Detector-V0.2 - Four-Way Pattern Classifier");
 
-    printf("\n OVERVIEW\n");
-    printf(" --------\n");
+    print_section("OVERVIEW");
     printf(" Combines V0.0 and V0.1 as two independent POVs.\n");
     printf(" Correctly detects and classifies patterns as one of:\n");
     printf("   Equivalence, Sub-pattern, Super-pattern, Anti-pattern\n");
 
-    printf("\n MECHANISM\n");
-    printf(" ---------\n");
+    print_section("MECHANISM");
     printf(" V0.0 POV -> Recognizes Equivalence + Sub-patterns\n");
     printf(" V0.1 POV -> Recognizes Equivalence + Super-patterns\n");
     printf(" For same weights, both POVs make independent decisions\n");
     printf(" based on their internal architecture.\n");
-    printf("\n R0  = recognition by V0.0\n");
-    printf(" R0' = derecognition by V0.0\n");
-    printf(" R1  = recognition by V0.1\n");
-    printf(" R1' = derecognition by V0.1\n");
+    printf("\n" CYAN " R0  " RESET "= recognition by V0.0\n");
+    printf(CYAN " R0' " RESET "= derecognition by V0.0\n");
+    printf(CYAN " R1  " RESET "= recognition by V0.1\n");
+    printf(CYAN " R1' " RESET "= derecognition by V0.1\n");
 
-    printf("\n LOGICAL ANALYZER (Final Decision Stage)\n");
-    printf(" ----------------------------------------\n");
-    printf("   R0  AND R1  -> Equivalence\n");
+    print_section("LOGICAL ANALYZER (Final Decision Stage)");
+    printf(CYAN "   R0  AND R1 " RESET " -> " BOLD_WHITE "Equivalence\n" RESET);
     printf("                  Arc = Wrc\n");
-    printf("   R0  AND R1' -> Sub-pattern\n");
+    printf(CYAN "   R0  AND R1'" RESET " -> " BOLD_WHITE "Sub-pattern\n" RESET);
     printf("                  Arc is proper subset of Wrc\n");
-    printf("   R0' AND R1  -> Super-pattern\n");
+    printf(CYAN "   R0' AND R1 " RESET " -> " BOLD_WHITE "Super-pattern\n" RESET);
     printf("                  Arc is proper superset of Wrc\n");
-    printf("   R0' AND R1' -> Anti-pattern\n");
+    printf(CYAN "   R0' AND R1'" RESET " -> " BOLD_WHITE "Anti-pattern\n" RESET);
     printf("                  Arc not sub/superset of Wrc\n");
     printf("                  OR Arc intersection Wrc = empty\n");
 
-    printf("\n WHY THIS IS NOT A PERCEPTRON\n");
-    printf(" ----------------------------\n");
+    print_section("WHY THIS IS NOT A PERCEPTRON");
     printf("   A perceptron evaluates degrees of similarity and\n");
     printf("   adapts over time. This system uses embedded\n");
     printf("   intelligence of its architecture to make decisions.\n");
     printf("   Our machine can reason but not improve.\n");
 
-    printf("\n LIMITATIONS\n");
-    printf(" -----------\n");
-    printf("   * No learning or adaptation.\n");
-    printf("   * Weight grid is fixed, never changes.\n");
-    printf("   * No generalization for shifted patterns.\n");
-    printf("   * Rigid decision boundaries.\n");
-    printf("   * No memory of past inputs.\n");
+    print_section("LIMITATIONS");
+    print_limitation("No learning or adaptation.");
+    print_limitation("Weight grid is fixed, never changes.");
+    print_limitation("No generalization for shifted patterns.");
+    print_limitation("Rigid decision boundaries.");
+    print_limitation("No memory of past inputs.");
 
-    printf("\n+------------------------------------------------------+\n");
+    printf("\n");
+    print_divider();
 }
 
 void manual_v10() {
     printf("\n");
-    printf("+------------------------------------------------------+\n");
-    printf("|      Detector-V1.0 - POP-Count Based Detector        |\n");
-    printf("+------------------------------------------------------+\n");
+    print_header("Detector-V1.0 - POP-Count Based Detector");
 
-    printf("\n OVERVIEW\n");
-    printf(" --------\n");
+    print_section("OVERVIEW");
     printf(" Recognizes pattern if matched pixels M > threshold T.\n");
     printf(" Unlike perfect equivalence check, a threshold is set\n");
     printf(" above which the pattern is recognized, and the\n");
@@ -369,94 +411,86 @@ void manual_v10() {
     printf(" Isomorphic to the McCulloch-Pitts (MCP) Neuron.\n");
     printf(" One step closer to self-learning machines.\n");
 
-    printf("\n MCP NEURON\n");
-    printf(" ----------\n");
+    print_section("MCP NEURON");
     printf(" Warren McCulloch and Walter Pitts proposed a simple\n");
     printf(" logical model of a biological neuron:\n");
-    printf("   Biological neuron:\n");
+    printf(BOLD_WHITE "   Biological neuron:\n" RESET);
     printf("     Receives inputs via dendrites.\n");
     printf("     Cell body performs computation.\n");
     printf("     Sends signal through axon if threshold met.\n");
-    printf("   MCP Neuron model:\n");
+    printf(BOLD_WHITE "   MCP Neuron model:\n" RESET);
     printf("     M = A + B  where A,B are in {0,1}\n");
-    printf("     M >= theta -> Neuron Fires,        Output = 1\n");
-    printf("     M <  theta -> Neuron Doesn't Fire, Output = 0\n");
-    printf("   Logic gate implementation:\n");
+    printf(CYAN "     M >= theta" RESET " -> Neuron Fires,        Output = 1\n");
+    printf(CYAN "     M <  theta" RESET " -> Neuron Doesn't Fire, Output = 0\n");    printf(BOLD_WHITE "   Logic gate implementation:\n" RESET);
     printf("     AND gate: theta = 2\n");
     printf("     OR  gate: theta = 1\n");
 
-    printf("\n ISOMORPHISM TO MCP NEURON\n");
-    printf(" -------------------------\n");
-    printf("   16 XNOR inputs     <->  Dendrites\n");
-    printf("   Population Counter <->  Cell Body\n");
-    printf("   Decision Maker     <->  Signal firing decision\n");
-    printf("   Output LED         <->  Axon\n");
+    print_section("ISOMORPHISM TO MCP NEURON");
+    print_iso("16 XNOR inputs", "Dendrites");
+    print_iso("Population Counter", "Cell Body");
+    print_iso("Decision Maker", "Signal firing decision");
+    print_iso("Output LED", "Axon");
 
-    printf("\n COMPONENTS\n");
-    printf(" ----------\n");
+    print_section("COMPONENTS");
 
-    printf("\n [1] XNOR Equivalence Grid (4x4)\n");
+    print_component(1, "XNOR Equivalence Grid (4x4)");
     printf("     16 XNOR gates. Each gate: Arc XNOR Orc\n");
     printf("     Gate goes high if both inputs are equal.\n");
     printf("     Outputs fed into the population counter.\n");
-    printf("     Biologically equivalent to: Dendrites\n");
+    printf(DIM "     Biologically equivalent to: Dendrites\n" RESET);
 
-    printf("\n [2] Population Counter\n");
+    print_component(2, "Population Counter");
     printf("     Calculates total matched pixels M.\n");
     printf("     Module made up of 64 half-adders.\n");
     printf("     Based on successive bit compression:\n");
     printf("       8 HA -> 8 SUM (weight 1) + 8 CARRY (weight 2)\n");
     printf("       4 HA -> compresses 8 SUM bits of weight 1\n");
     printf("       Repeats until single bit of each weight remains.\n");
-    printf("     Half Adder weight rule:\n");
+    printf(BOLD_WHITE "     Half Adder weight rule:\n" RESET);
     printf("       If inputs A,B have weight W:\n");
     printf("         SUM  output -> weight W\n");
     printf("         CARRY output -> weight 2W\n");
     printf("     Wallace Tree for parallel faster reduction.\n");
-    printf("     Biologically equivalent to: Cell Body\n");
+    printf(DIM "     Biologically equivalent to: Cell Body\n" RESET);
 
-    printf("\n [3] Decision Maker\n");
+    print_component(3, "Decision Maker");
     printf("     Priority-Encoded Magnitude Comparator.\n");
-    printf("     Pattern Recognized     : M > theta\n");
-    printf("     Pattern Not Recognized : M <= theta\n");
-    printf("     Biologically equivalent to: Signal firing\n");
+    printf(CYAN "     Pattern Recognized     : " RESET "M > theta\n");
+    printf(CYAN "     Pattern Not Recognized : " RESET "M <= theta\n");
+    printf(DIM "     Biologically equivalent to: Signal firing\n" RESET);
 
-    printf("\n [4] Threshold T-pins\n");
+    print_component(4, "Threshold T-pins");
     printf("     Pins: T8 T4 T2 T1\n");
     printf("     Range : 0 (0000) to 15 (1111)\n");
     printf("     Example: 1001 -> threshold = 9\n");
     printf("     Threshold is adjustable for confidence tuning.\n");
 
-    printf("\n [5] Output LED\n");
+    print_component(5, "Output LED");
     printf("     Fires if M > theta.\n");
-    printf("     Biologically equivalent to: Axon\n");
+    printf(DIM "     Biologically equivalent to: Axon\n" RESET);
 
-    printf("\n THRESHOLD EXAMPLES\n");
-    printf(" ------------------\n");
-    printf("   theta=7, M=8 : M > theta  -> Pattern RECOGNIZED\n");
-    printf("   theta=9, M=8 : M <= theta -> Pattern NOT RECOGNIZED\n");
-
-    printf("\n PROOF OF CONCEPT\n");
-    printf(" ----------------\n");
+    print_section("THRESHOLD EXAMPLES");
+    printf(GREEN "   theta=7, M=8 : M > theta  -> " RESET "Pattern RECOGNIZED\n");
+    printf(YELLOW "   theta=9, M=8 : M <= theta -> " RESET "Pattern NOT RECOGNIZED\n");
+    print_section("PROOF OF CONCEPT");
     printf("   Instead of perfect equivalence, we judge based on\n");
     printf("   score M vs threshold theta. A self-learning machine\n");
     printf("   could adjust theta automatically via feedback until\n");
     printf("   it converges to a value that correctly classifies\n");
     printf("   input patterns.\n");
 
-    printf("\n+------------------------------------------------------+\n");
+    printf("\n");
+    print_divider();
 }
 
 void manual_all() {
     printf("\n");
-    printf("+------------------------------------------------------+\n");
-    printf("|          Detector Manual - All Versions              |\n");
-    printf("+------------------------------------------------------+\n");
-    printf("\n  V0.0 -> Binary pixel filter, sub-pattern problem\n");
-    printf("  V0.1 -> Fixes V0.0, super-pattern recognition\n");
-    printf("  V0.2 -> Four-way classifier combining both POVs\n");
-    printf("  V1.0 -> POP-Count, threshold-based, MCP Neuron\n");
-    printf("\n Showing all versions...\n");
+    print_header("Detector Manual - All Versions");
+    printf(CYAN "  V0.0" RESET " -> Binary pixel filter, sub-pattern problem\n");
+    printf(CYAN "  V0.1" RESET " -> Fixes V0.0, super-pattern recognition\n");
+    printf(CYAN "  V0.2" RESET " -> Four-way classifier combining both POVs\n");
+    printf(CYAN "  V1.0" RESET " -> POP-Count, threshold-based, MCP Neuron\n");
+    printf(DIM "\n Showing all versions...\n" RESET);
     manual_v00();
     manual_v01();
     manual_v02();
@@ -475,23 +509,31 @@ int main(int argc, char *argv[]) {
     }
 
     if (argc == 2 && strcmp(argv[1], "--search") == 0) {
-        printf("Usage: ./detector-manual --search <term>\n");
-        printf("Example: ./detector-manual --search threshold\n");
+        printf(BOLD_WHITE "Usage  : " RESET "./detector-manual --search <term>\n");
+        printf(BOLD_WHITE "Example: " RESET "./detector-manual --search threshold\n");
         return 1;
     }
 
     char input[20];
 
-    printf("+------------------------------------------------------+\n");
-    printf("|          Gate Level Perceptron Manual                |\n");
-    printf("|        Pattern Detector Architecture Docs            |\n");
-    printf("+------------------------------------------------------+\n");
-    printf(" Tip: search a component directly from terminal:\n");
-    printf("      ./detector-manual --search threshold\n");
+    printf("\n");
+    print_divider();
+    printf(DIM "|" RESET BOLD_CYAN "  %-52s" RESET DIM "|" RESET "\n", "Gate Level Perceptron Manual");
+    printf(DIM "|" RESET "  %-52s" DIM "|" RESET "\n", "Pattern Detector Architecture Docs");
+    print_divider();
+    printf(DIM " Tip: " RESET "search a component directly from terminal:\n");
+    printf(CYAN "      ./detector-manual --search threshold\n" RESET);
 
     while (1) {
-        printf("\n Available: V0.0 | V0.1 | V0.2 | V1.0 | all | search | exit\n");
-        printf(" Enter version: ");
+        printf("\n" DIM " Available: " RESET
+               CYAN "V0.0" RESET " | "
+               CYAN "V0.1" RESET " | "
+               CYAN "V0.2" RESET " | "
+               CYAN "V1.0" RESET " | "
+               CYAN "all"  RESET " | "
+               CYAN "search" RESET " | "
+               CYAN "exit" RESET "\n");
+        printf(BOLD_WHITE " Enter version: " RESET);
         scanf("%s", input);
 
         if (strcmp(input, "V0.0") == 0 || strcmp(input, "v0.0") == 0) {
@@ -506,15 +548,15 @@ int main(int argc, char *argv[]) {
             manual_all();
         } else if (strcmp(input, "search") == 0) {
             char query[50];
-            printf(" Enter term to search: ");
+            printf(BOLD_WHITE " Enter term to search: " RESET);
             scanf("%s", query);
             search(query);
         } else if (strcmp(input, "exit") == 0) {
-            printf("\n Goodbye!\n");
+            printf(BOLD_GREEN "\n Goodbye!\n" RESET);
             break;
         } else {
-            printf("\n [ERROR] Unknown input '%s'\n", input);
-            printf(" Try: V0.0, V0.1, V0.2, V1.0, all, search, exit\n");
+            printf(BOLD_RED "\n [ERROR]" RESET " Unknown input '%s'\n", input);
+            printf(DIM " Try: V0.0, V0.1, V0.2, V1.0, all, search, exit\n" RESET);
         }
     }
 
