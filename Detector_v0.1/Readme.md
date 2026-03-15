@@ -1,5 +1,5 @@
 # 🕵️‍♂️ Detector-V0.1
-- Solves the sub-pattern recognition problem of the [Detector_v0.0](../Detector_v0.0), instead recognizes the exact pattern or the super-patterns.
+- Solves the sub-pattern recognition problem of the [Detector_v0.0](../Detector_v0.0), instead recognizes the exact pattern or the super-patterns
 
 <p align="center">
   <img src="Images/Sub-pattern Disrecognition.png" alt="Pattern Detector_v0.1 Output" width="1000">
