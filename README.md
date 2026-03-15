@@ -101,3 +101,7 @@ powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
 ## 📜License
 - Source code and HDL files are licensed under the MIT License.
 - Documentation, diagrams, images, and PDFs are licensed under Creative Commons Attribution 4.0 (CC BY 4.0).
+
+<p align="center">
+  <img src="Detector_v0.0/Images/tva.svg" width="180"/>
+</p>
