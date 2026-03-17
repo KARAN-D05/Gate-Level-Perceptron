@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ─────────────────────────────────────────
-#  KARAN-D05 | Repository Downloader
+#  KARAN-D05  | Repository Downloader
 #  Works on macOS and Linux
 # ─────────────────────────────────────────
 
