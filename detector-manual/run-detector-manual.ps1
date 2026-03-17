@@ -27,6 +27,19 @@ try {
 }
 
 Write-Host ""
+Write-Host "Downloading detector-manual.bat from GitHub..."
+try {
+    Invoke-WebRequest `
+        -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/detector-manual.bat" `
+        -OutFile "detector-manual.bat" `
+        -ErrorAction Stop
+    Write-Host "[OK] Batch file download complete."
+} catch {
+    Write-Host "[ERROR] Batch file download failed."
+    exit 1
+}
+
+Write-Host ""
 Write-Host "Compiling..."
 gcc detector-manual.c -o detector-manual.exe
 
