@@ -103,10 +103,10 @@ powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
 `portmap` is a lightweight CLI tool that extracts port definitions (`input`, `output`, `inout`) from Verilog modules and presents them in a clean table or Markdown format.
 
 ### 🔗 Source
-https://github.com/KARAN-D05/Computing_Machinery_from_Scratch/blob/main/portmap.nim
+[Source File](https://github.com/KARAN-D05/Computing_Machinery_from_Scratch/blob/main/portmap.nim)
 
 ### 📦 Release (Download Binary)
-https://github.com/KARAN-D05/Computing_Machinery_from_Scratch/releases/tag/v1.0.0
+[Binary File](https://github.com/KARAN-D05/Computing_Machinery_from_Scratch/releases/tag/v1.0.0)
 
 ### 🚀 Usage
 ```bash
