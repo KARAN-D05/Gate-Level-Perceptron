@@ -15,7 +15,6 @@
 </p>
 
 ### Port Map - `det.v`
-
 | Port | Direction | Width |
 |------|-----------|-------|
 | `in` | input | [15:0] |
