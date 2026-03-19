@@ -1,3 +1,7 @@
+// =============================================================================
+//  eq_sub_super_anti_recognition — Gate-Level Pattern Detector (v0.2)
+// =============================================================================
+
 module sub_super_multi_pov(
     input [15:0] in,
     input [15:0] weight,
