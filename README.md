@@ -1,7 +1,7 @@
 # 🔍 Gate Level Perceptron
 - This project explores pattern recognition at logic-gate level.
   
-- It began as an attempt to build **`perceptron-like system`** for recognizing patterns, but early versions evolved into a strictly logical pattern relation anlyzer using strict boolean logic.
+- It began as an attempt to build **`perceptron-like system`** for recognizing patterns, but early versions evolved into a strictly logical pattern relation analyzer using strict boolean logic.
   
 - Subsequent versions transitioned from rigid equivalence checks to popcount-based scoring and threshold decisions, moving the architecture toward a true perceptron and, eventually self learning behaviour.
 
@@ -72,7 +72,7 @@
 
 ## 🔜 Future Versions
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
-- Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an apropriate threshold.
+- Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
 - It would form basis of simple self-learning adaptive system. 
 
 ## 🛠️Current Development:
@@ -98,6 +98,25 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-P
 powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
 ```
 
+## ⬇️ Download This Repository
+
+### 🪟 Windows
+Download → [download_repos.bat](./download_repos.bat)
+``` 
+Double-click it and pick the repo(s) you want.
+```
+
+### 🐧 Linux / macOS
+Download → [download_repos.sh](./download_repos.sh)
+```
+bash
+
+chmod +x download_repos.sh
+./download_repos.sh
+```
+
+> Always downloads the latest version.
+
 ## 🔧 Tool: portmap - Verilog Port Extractor
 
 `portmap` is a lightweight CLI tool that extracts port definitions (`input`, `output`, `inout`) from Verilog modules and presents them in a clean table or Markdown format.
@@ -117,25 +136,6 @@ portmap file.v --md
 ## 🧰 Utils
 - [filetree.lua](https://github.com/KARAN-D05/portmap-HDL/tree/main/utils) - A repository file tree generator that prints a visual directory tree with file-type icons and a file count breakdown by extension (`.v`, `.circ`, `.md`, `.py` and more).
 - Works on Linux and Windows. Included automatically when downloading repos via [download_repos.bat](download_repos.bat) / [download_repos.sh](download_repos.sh).
-
-## ⬇️ Download This Repository
-
-### 🪟 Windows
-Download → [download_repos.bat](./download_repos.bat)
-``` 
-Double-click it and pick the repo(s) you want.
-```
-
-### 🐧 Linux / macOS
-Download → [download_repos.sh](./download_repos.sh)
-```
-bash
-
-chmod +x download_repos.sh
-./download_repos.sh
-```
-
-> Always downloads the latest version.
 
 ## 📜License
 - Source code and HDL files are licensed under the MIT License.
