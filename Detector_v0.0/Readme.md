@@ -1,5 +1,5 @@
 # 🕵️‍♂️ Detector-V0.0
-- A primitive, configurable pattern detection machine built entirely from logic gates. It uses a weight array to filter the input pattern and a decision-making stage to check recognition. 
+- A configurable pattern detection machine built entirely from logic gates. It uses a weight array to filter the input pattern and a decision-making stage to check recognition. 
 
 <p align="center">
   <img src="Images/Pattern-Recognition-2.png" alt="Pattern Detector Output" width="1000">
