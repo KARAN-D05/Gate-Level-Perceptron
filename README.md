@@ -81,23 +81,6 @@
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
 - It would form basis of simple self-learning adaptive system. 
 
-## 🛠️ Toolchain
-
-This project includes a built-in reference manual for the detector architecture that can be queried directly from your terminal. View full manual: [detector-manual](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/detector-manual)
-
-**Linux / Mac:**
-```bash
-curl -O https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.sh
-chmod +x run-detector-manual.sh
-./run-detector-manual.sh
-```
-
-**Windows:**
-```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.ps1" -OutFile "run-detector-manual.ps1"
-powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
-```
-
 ## ⬇️ Download This Repository
 
 ### 🪟 Windows
@@ -117,23 +100,40 @@ chmod +x download_repos.sh
 
 > Always downloads the latest version.
 
-## 🔧 Tool: portmap - Verilog Port Extractor
+## 🛠️ Toolchain & Repo Utilities : Built to make navigating and interacting with this repo easier
+
+This project includes a built-in reference manual for the detector architecture that can be queried directly from your terminal. View full manual: [detector-manual](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/detector-manual)
+
+**Linux / Mac:**
+```bash
+curl -O https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.sh
+chmod +x run-detector-manual.sh
+./run-detector-manual.sh
+```
+
+**Windows:**
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/KARAN-D05/Gate-Level-Perceptron/main/detector-manual/run-detector-manual.ps1" -OutFile "run-detector-manual.ps1"
+powershell -ExecutionPolicy Bypass -File run-detector-manual.ps1
+```
+
+### 🔧 portmap - Verilog Port Extractor
 
 `portmap` is a lightweight CLI tool that extracts port definitions (`input`, `output`, `inout`) from Verilog modules and presents them in a clean table or Markdown format.
 
-### 🔗 Source
+#### 🔗 Source
 https://github.com/KARAN-D05/portmap-HDL/blob/main/portmap.nim
 
-### 📦 Release (Download Binary)
+#### 📦 Release (Download Binary)
 https://github.com/KARAN-D05/portmap-HDL/releases/tag/v1.0.0
 
-### 🚀 Usage
+#### 🚀 Usage
 ```bash
 portmap file.v
 portmap file.v --md
 ```
 
-## 🧰 Utils
+### 🧰 Repo Filetree Generator
 - [filetree.lua](https://github.com/KARAN-D05/portmap-HDL/tree/main/utils) - A repository file tree generator that prints a visual directory tree with file-type icons and a file count breakdown by extension (`.v`, `.circ`, `.md`, `.py` and more).
 - Works on Linux and Windows. Included automatically when downloading repos via [download_repos.bat](download_repos.bat) / [download_repos.sh](download_repos.sh).
 
