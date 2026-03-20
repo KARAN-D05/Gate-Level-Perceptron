@@ -70,16 +70,16 @@
     <p> Equivalence & Super & Sub & Anti-Pattern Recognition 🔹🟦 </p>
 </div>
 
-## 🔜 Future Versions
-- Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
-- Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
-- It would form basis of simple self-learning adaptive system. 
-
 ## 🛠️Current Development:
  - Population Counter Developed and operation verified ✓
  - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
  - Pop-Count based pattern detector developed and tested ✓
  - Detector Version 0 series implemented in Verilog ✓
+
+## 🔜 Future Versions
+- Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
+- Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
+- It would form basis of simple self-learning adaptive system. 
 
 ## 🛠️ Toolchain
 
