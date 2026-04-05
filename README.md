@@ -76,7 +76,7 @@
  - Pop-Count based pattern detector developed and tested ✓
  - Detector Version 0 series implemented in Verilog ✓
 
-## 🔜 Future Versions
+## 🔜 Future Version - Cybernetic Feedback-Driven Adaptive Learning System
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
 - It would form basis of simple self-learning adaptive system. 
