@@ -102,6 +102,7 @@ chmod +x download_repos.sh
 
 ## 🛠️ Toolchain & Repo Utilities - Built to make navigating and interacting with this repo easier
 
+### 💻 Terminal-Based Manual
 This project includes a built-in reference manual for the detector architecture that can be queried directly from your terminal. View full manual: [detector-manual](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/detector-manual)
 
 **Linux / Mac:**
