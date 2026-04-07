@@ -1,9 +1,10 @@
 # 🔍 Gate Level Perceptron
-- This project explores pattern recognition at logic-gate level.
+- Implements a hardware-level binary classifier, transitioning from strict Boolean matching to threshold-based decision logic, laying the foundation for feedback-driven adaptive learning and generalization.
   
-- It began as an attempt to build **`perceptron-like system`** for recognizing patterns, but early versions evolved into a strictly logical pattern relation analyzer using strict boolean logic.
+- Early versions evolved into a strictly logical pattern relation analyzer using strict boolean logic.
   
-- Subsequent versions transitioned from rigid equivalence checks to popcount-based scoring and threshold decisions, moving the architecture towards self-learning behaviour.
+- Subsequent iterations introduced popcount aggregation and threshold-based decisions, enabling noise tolerance and approximate pattern recognition.
+ 
 
 <p align="center">
   <img src="Detector_v1.0/images/Block-Diagram.png" alt="Block Diagram" width="1500">
