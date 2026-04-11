@@ -1,2 +1,3 @@
 # Manual files are documentation not source code
 detector-manual.c linguist-documentation=true
+download_repos.sh linguist-documentation=true
