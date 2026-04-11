@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  🧩 Block-Diagram - Detector_v1.0 
+  🧩 Block-Diagram - Detector_v1.0 (Alterable Decision Boundary)
 </p>
 
 ## ⚙️ Implementation Stack
