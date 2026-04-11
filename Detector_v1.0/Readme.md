@@ -1,4 +1,4 @@
-# 📊 POP-Count Based Detector-V1.0
+# 📊 POP-Count Based Detector - V1.0
 - It recognizes the pattern if the number of `Matched Pixels (M)` are greater than the set `Threshold(θ)`
 - Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
 
