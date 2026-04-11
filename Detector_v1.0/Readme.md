@@ -24,6 +24,7 @@
    - The Output LED is biologically equivalent to the axon
 - Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during pattern recognition
 - [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
+- [Matlab Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Gate-Level-Perceptron/blob/main/Detector_v1.0/MCP_Neuron.m)
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
