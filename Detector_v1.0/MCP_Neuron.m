@@ -1,6 +1,6 @@
 % MCP Neuron - AND and OR Gate Emulation
 % Two unweighted binary inputs, sum compared against threshold theta
-% A simplistic 2-Input model of MCP Neuron, the detector_v1.0 is essentially a multi-input MCP Neuron with other modules like XNOR-Equivalence grid, Population counter etc attached to it.
+% A simplistic 2-Input model of MCP Neuron, the core of detector_v1.0 is essentially a multi-input MCP Neuron with other modules like XNOR-Equivalence grid, Population counter etc interfaced to it.
 % https://octave-online.net -> Use to compile the MATLAB code and emulate AND and OR logic 
 
 function output = mcp_neuron(x1, x2, theta)
