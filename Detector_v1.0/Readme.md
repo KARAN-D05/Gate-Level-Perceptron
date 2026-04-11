@@ -23,7 +23,7 @@
    - Decision-Maker is biologically equivalent to whether an electrical signal is sent or not based on the threshold
    - The Output LED is biologically equivalent to the axon
 - Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during pattern recognition
-- [More on McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
+- [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
