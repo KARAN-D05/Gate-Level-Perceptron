@@ -5,7 +5,6 @@
   
 - Subsequent iterations introduced popcount aggregation and threshold-based decisions, enabling noise tolerance and approximate pattern recognition.
  
-
 <p align="center">
   <img src="Detector_v1.0/images/Block-Diagram.png" alt="Block Diagram" width="1500">
 </p>
@@ -17,6 +16,12 @@
 ## ⚙️ Implementation Stack
 ![Verilog](https://img.shields.io/badge/Verilog-FFEA00?style=for-the-badge&logoColor=black)
 ![Logisim Circuits](https://img.shields.io/badge/Logisim%20Circuits-00C853?style=for-the-badge)
+
+## 📈 Planned Progression
+- **`Stage 0 (v0.x)`**: Strict Boolean pattern relation analyzer. No learning, no noise tolerance, decision boundaries fixed by structural wiring.
+- **`Stage 1 (v1.0)`**: Popcount based similarity and a variable threshold to alter the decision boundary. Introduces noise tolerance and ability to change the decision output without structural changes.
+- **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System will itself alter its decision boundaries based on external feedback to correct its decision output.
+- **Stage 3 (v2.x)**: A System that generalizes on training data and based on that makes decisions about unseen data.
 
 ## 🧱 Versions Built
 - **`Version 0`**: A pattern relation analyzer that classifies how an input pattern relates to a stored pattern, enforces rule based recognition rather than learning.
