@@ -8,8 +8,8 @@ module eq_sub_recognition(
     output reg recognition  // Output (Recognition/No Recognition)
 );
 
-  wire [15:0] inaw;        
-  wire [15:0] inco;        
+   wire [15:0] inaw;    // (in AND weights) = out
+   wire [15:0] inco;    // in COMPARE out 
 
   assign inaw = in & weight;  // 16 Wires carrying result of (INrc ^ WEIGHTrc), for rc=00,01,02,03,10,....,33
 
