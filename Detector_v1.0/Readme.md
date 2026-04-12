@@ -2,23 +2,6 @@
 - It recognizes the pattern if the number of `Matched Pixels (M)` are greater than the set `Threshold(θ)`
 - Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
 
-## 🧬 The McCulloch-Pitts Artificial Neuron
-- A simple computational model of a biological neuron
-- `Biological neuron:`
-   - receives inputs via its tree-like projections called dendrites
-   - The cell body then performs computation on these inputs
-   - Based on results of the computation, it may send an electrical signal through the axon toward axon-terminals which in turn communicate it to other neurons
-   - This forms a biological neural network
-- `MCP Neuron:`
-   - Warren McCulloch and Walter Pitts proposed a simple logical model of a neuron
-   - It sums the inputs say A and B where A,B ∈ {0,1}: M = A + B
-   - It has a threshold θ, if:
-      - M ≥ θ -> Neuron Fires, Output = 1
-      - M < θ -> Neuron Doesn't Fires, Output = 0
-   - Based on the value of θ, we can implement any logic gate like AND, OR
-   - For AND gate θ = 2, so the neuron will only output 1 if both the inputs are 1. ( 1(A) + 1(B) ≥ 2(θ) ), similarly for OR gate θ = 1
-- [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
-
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
 - It is a module made up of 64 Half-adders, that counts total number of it's inputs that are 1
@@ -57,6 +40,23 @@
 - It is essentially a Priority-Encoded Magnitude Comparator that goes high if M is greater than θ
  - **Setting the Threshold(θ):** Use T-pins/Threshold pins to set the threshold as required: (T8 T4 T2 T1), eg:1001 sets the threshold to 9
  - Threshold is not fixed, thus giving us the ability to adjust it accordingly
+
+## 🧬 The McCulloch-Pitts Artificial Neuron
+- A simple computational model of a biological neuron
+- `Biological neuron:`
+   - receives inputs via its tree-like projections called dendrites
+   - The cell body then performs computation on these inputs
+   - Based on results of the computation, it may send an electrical signal through the axon toward axon-terminals which in turn communicate it to other neurons
+   - This forms a biological neural network
+- `MCP Neuron:`
+   - Warren McCulloch and Walter Pitts proposed a simple logical model of a neuron
+   - It sums the inputs say A and B where A,B ∈ {0,1}: M = A + B
+   - It has a threshold θ, if:
+      - M ≥ θ -> Neuron Fires, Output = 1
+      - M < θ -> Neuron Doesn't Fires, Output = 0
+   - Based on the value of θ, we can implement any logic gate like AND, OR
+   - For AND gate θ = 2, so the neuron will only output 1 if both the inputs are 1. ( 1(A) + 1(B) ≥ 2(θ) ), similarly for OR gate θ = 1
+- [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
 
 ## 🧠 Structural Correspondence to MCP-Neuron
 - The 16 input lines from the XNOR equivalence grid, when aggregated by the population counter and compared against a variable threshold to determine the output, realize a linear threshold function.
