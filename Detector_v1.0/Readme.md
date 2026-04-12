@@ -64,9 +64,9 @@
  - **Setting the Threshold(θ):** Use T-pins/Threshold pins to set the threshold as required: (T8 T4 T2 T1), eg:1001 sets the threshold to 9
  - Threshold is not fixed, thus giving us the ability to adjust it accordingly
 
-``
+```
 The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron. The correspondence was not explicitly designed but emerget naturally from contructing threshold-based decision-making system.
-``
+```
 <p align="center">
   <img src="images/Recognition.png" alt="Recognition" width="900">
 </p>
