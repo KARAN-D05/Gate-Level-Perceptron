@@ -48,8 +48,8 @@ module testbench;
       weight = 16'hF000;
       #10;
 
-      $finish;
       $display("Simulation Complete!");
+      $finish;
 
   end
 
