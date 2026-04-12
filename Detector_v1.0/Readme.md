@@ -77,11 +77,15 @@
 
 ## 🧠 Structural Correspondence to MCP-Neuron
 - The 16 input lines from the XNOR equivalence grid, when aggregated by the population counter and compared against a variable threshold to determine the output, realize a linear threshold function.
+> ```
 > M > θ -> Output = 1
 > M M ≤ θ -> Output = 0
+> ```
 - That is structurally equivalent to a multi-input McCulloch–Pitts (MCP) neuron which operates as,
+> ```
 > M ≥ θ -> Output = 1
 > M < θ -> Output = 0
+> ```
 - The difference in inequality reflects a stricter decision criterion in my system so it only activates when the match count exceeds the threshold, not when it is equal.
 - The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
 
