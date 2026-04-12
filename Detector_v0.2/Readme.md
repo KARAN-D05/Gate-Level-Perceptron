@@ -40,12 +40,9 @@
 </p>
 
 ## ⚠️Limitations
-- No learning or adaptation, weight grid is fixed and never changes based on experience.
-- No generalization, shifted or  structurally similar patterns are treated as different.
-- Rigid decision boundaries.
-- No memory of past inputs
+- No way to change its decision output without changing its structural wiring.
+- No Noise Tolerance and adaptation.
 
-## ✔ Why this is not Self-learning Intelligence or a Perceptron:
-- A perceptron evaluates degrees of similarity and adapts over time, while this system uses the embedded intelligence of its architecture to make decisons. Our machine can reason but not improve.
-- This system exhibits embedded intelligence: it can reason about and classify relationships between patterns using fix logical rules. However, it is not a self-learning system.
-
+## ✔ Why this is not Self-learning Intelligence:
+- A learning system evaluates degrees of similarity and adapts over time, while this system uses the embedded intelligence of its architecture to make decisons. Our machine can reason but not improve.
+- It exhibits embedded intelligence: it can reason about and classify relationships between patterns using fix logical rules. However, it is not a self-learning system.
