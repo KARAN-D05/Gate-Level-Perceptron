@@ -17,12 +17,6 @@
       - M < θ -> Neuron Doesn't Fires, Output = 0
    - Based on the value of θ, we can implement any logic gate like AND, OR
    - For AND gate θ = 2, so the neuron will only output 1 if both the inputs are 1. ( 1(A) + 1(B) ≥ 2(θ) ), similarly for OR gate θ = 1
-- The POP-Count based Detector's subsystem consisting of Pop-counter, Threshold pins, Decision-Maker is isomorphic to the MCP Neuron
-   - 16 Inputs from XNOR grid to pop-counter is equivalent to the Dendrites
-   - The POP-Counter is equivalent to the Cell Body
-   - Decision-Maker is equivalent to whether an electrical signal is sent or not based on the threshold
-   - The Output LED is equivalent to the axon
-- Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during decison-making
 - [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
 
 ## 👥 Population Counter
@@ -65,16 +59,16 @@
  - Threshold is not fixed, thus giving us the ability to adjust it accordingly
 
 ## 🧠 Structural Correspondence to MCP-Neuron
-> The 16 input lines from the XNOR equivalence grid, when aggregated by the population counter and compared against a variable threshold to determine the output, realize a linear threshold function.
-> M > θ -> Output = 1
-> M M ≤ θ -> Output = 0
-> That is structurally equivalent to a multi-input McCulloch–Pitts (MCP) neuron which operates as,
-> M ≥ θ -> Output = 1
-> M < θ -> Output = 0
-> The difference in inequality reflects a stricter decision criterion in my system so it only activates when the match count exceeds the threshold, not when it is equal.
-> This correspondence was not explicitly designed but emerged naturally from constructing a threshold-based decision-making system.
-> The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron.
-> The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
+- The 16 input lines from the XNOR equivalence grid, when aggregated by the population counter and compared against a variable threshold to determine the output, realize a linear threshold function.
+- M > θ -> Output = 1
+- M M ≤ θ -> Output = 0
+- That is structurally equivalent to a multi-input McCulloch–Pitts (MCP) neuron which operates as,
+- M ≥ θ -> Output = 1
+- M < θ -> Output = 0
+- The difference in inequality reflects a stricter decision criterion in my system so it only activates when the match count exceeds the threshold, not when it is equal.
+- This correspondence was not explicitly designed but emerged naturally from constructing a threshold-based decision-making system.
+- The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron.
+- The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
 
 <p align="center">
   <img src="images/Recognition.png" alt="Recognition" width="900">
