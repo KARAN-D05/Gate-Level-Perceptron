@@ -8,7 +8,7 @@ module sub_super_multi_pov(
     output reg sub,               // Input ⊂ Weight
     output reg super,             // Input ⊃ Weight
     output reg eq,                // Input = Weight
-    output reg anti,              // (Input ⊄ Weight)∧(Input ⊅ Weight)∧(Input ≠ Weight)∨(Input ∩ Weight = ∅)∨(Input ∩ Weight ≠ ∅)
+    output reg anti,              // (Input ⊄ Weight)∧(Input ⊅ Weight)∧(Input ≠ Weight)
     output reg recognition_sub,   // 1 if (Input ⊂ Weight)∨(Input = Weight)
     output reg recognition_super  // 1 if (Input ⊃ Weight)∨(Input = Weight)
 );
