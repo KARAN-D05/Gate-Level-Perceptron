@@ -41,8 +41,6 @@
   Detector does not recognize super-pattern
 </p>
 
-## ⚠️Limitations
-
 <p align="center">
   <img src="Images/Sub-pattern recognition.png" alt="Pattern Detector Output" width="1000">
 </p>
@@ -51,6 +49,7 @@
   Detector recognizes Sub-pattern
 </p>
 
+## ⚠️Limitations
 - Looks for perfect equivalence between input and filtered output.
 - No way to change its decision output without changing its structural wiring.
 - No scoring or noise tolerance - expects clean inputs.
