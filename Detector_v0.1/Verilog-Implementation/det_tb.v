@@ -18,27 +18,32 @@ module testbench;
     $dumpfile("Sim.vcd");
     $dumpvars(0, testbench);
 
+    // in_t = Weight_t -> Recognition=1
     in_t = 16'b1110010001000100;
     weight_t = 16'b1110010001000100;
     #10;
-    
+
+    // in_t ⊂ Weight_t -> Recognition=0
     in_t = 16'b0100010001000100;
     weight_t = 16'b1110010001000100;
     #10;
 
+    // Weight_t ⊂ in_t -> Recognition=1
     in_t = 16'b1111110001000100;
     weight_t = 16'b1110010001000100;
     #10;
 
+    // Weight_t ⊂ in_t -> Recognition=1
     in_t = 16'b1111111111111111;
     weight_t = 16'b1110010001000100;
     #10;
 
+    // in_t ⊂ Weight_t -> Recognition=0
     in_t = 16'b1111110001000100;
     weight_t = 16'b1111111111111111;
     #10;
 
-    
+    // in_t = Weight_t -> Recognition=1
     in_t = 16'b1111111111111111;
     weight_t = 16'b1111111111111111;
     #10;
