@@ -48,8 +48,8 @@ module testbench;
     weight_t = 16'b1111111111111111;
     #10;
 
-    $finish;
     $display("Simulation Complete !");
+    $finish;
   
   end
 endmodule
