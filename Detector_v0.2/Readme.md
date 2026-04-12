@@ -46,3 +46,9 @@
 ## ✔ Why this is not Self-learning Intelligence:
 - A learning system evaluates degrees of similarity and adapts over time, while this system uses the embedded intelligence of its architecture to make decisons. Our machine can reason but not improve.
 - It exhibits embedded intelligence: it can reason about and classify relationships between patterns using fix logical rules. However, it is not a self-learning system.
+
+## 🔮Next Version 
+- Transitions to similarity-score based decision making rather than strict-boolean matching employed in Detector_v0.x series.
+- Introduces a parameter called threshold that allows us to manually alter the system decision boundary hence allowing us to to change the system decision output without changing its structural wiring.
+- Has Noise Tolerance
+- [Check this out](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.0)
