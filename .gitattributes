@@ -1,3 +1,4 @@
 detector-manual.c linguist-documentation=true
 download_repos.sh linguist-documentation=true
 download_repos.bat linguist-documentation=true
+run_sims.py linguist-documentation=true
