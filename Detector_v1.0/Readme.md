@@ -79,7 +79,7 @@
 - The 16 input lines from the XNOR equivalence grid, when aggregated by the population counter and compared against a variable threshold to determine the output, realize a linear threshold function.
 > ```
 > M > θ -> Output = 1
-> M M ≤ θ -> Output = 0
+> M ≤ θ -> Output = 0
 > ```
 - That is structurally equivalent to a multi-input McCulloch–Pitts (MCP) neuron which operates as,
 > ```
