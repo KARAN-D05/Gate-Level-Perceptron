@@ -1,6 +1,22 @@
 # 📊 POP-Count Based Detector - V1.0
 - It recognizes the pattern if the number of `Matched Pixels (M)` are greater than the set `Threshold(θ)`
-- Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary
+- Unlike the perfect equivalence check we have set a threshold above which the pattern is recognized and the threshold can vary thus allowing us to alter the alter the system decision boundary.
+
+<p align="center">
+  <img src="images/Recognition.png" alt="Recognition" width="900">
+</p>
+
+<p align="center">
+  θ = 7 & M = 8, M > θ: hence Pattern is recognized
+</p>
+
+<p align="center">
+  <img src="images/Non-Recognition.png" alt="Non-Recognition" width="900">
+</p>
+
+<p align="center">
+  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
+</p>
 
 ## 👥 Population Counter
 - It calculates the total number of matched pixels (M)
@@ -69,22 +85,6 @@
 - This correspondence was not explicitly designed but emerged naturally from constructing a threshold-based decision-making system.
 - The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron.
 - The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
-
-<p align="center">
-  <img src="images/Recognition.png" alt="Recognition" width="900">
-</p>
-
-<p align="center">
-  θ = 7 & M = 8, M > θ: hence Pattern is recognized
-</p>
-
-<p align="center">
-  <img src="images/Non-Recognition.png" alt="Non-Recognition" width="900">
-</p>
-
-<p align="center">
-  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
-</p>
 
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
