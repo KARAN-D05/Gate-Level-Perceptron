@@ -55,3 +55,7 @@
 <p align="center">
   Detector recognizes equivalent pattern
 </p>
+
+## 🔮Next Version 
+- Utilizes Characterisitcs of [Detector_v0.0](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v0.0) and Detector_V0.1 to do a 2-POV Logical analysis to classify input pattern as Sub-pattern, super-pattern, equivalence or anti-pattern with respect to reference pattern.
+- [Check this out](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v0.2)
