@@ -43,7 +43,7 @@ module testbench;
       weight = 16'hFF0F;
       #10;
 
-     // (in ⊄ weight)∧(in ⊅ weight)∧(in ≠ weight)∨(in ∩ weight = ∅)∨(in ∩ weight ≠ ∅) -> anti=1
+     // (in ⊄ weight)∧(in ⊅ weight)∧(in ≠ weight) -> anti=1
       in = 16'h000F;
       weight = 16'hF000;
       #10;
