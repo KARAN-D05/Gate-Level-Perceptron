@@ -54,3 +54,8 @@
 - No way to change its decision output without changing its structural wiring.
 - No scoring or noise tolerance - expects clean inputs.
 - My attempt at a perceptron ended up as a binary pixel filter + comparator. **Basically v0.0 is a machine the George Orwell's 1984 Thought Police would approve of 😂**.
+
+## 🔮Next Version 
+- Reverses the Mathematical behaviour of current version (A<sub>rc</sub> &subseteq; W<sub>rc</sub>) to A<sub>rc</sub> &superseteq; W<sub>rc</sub>
+- Recognizes Equivalence and Super-Patterns.
+- [Check this out](https://github.com/KARAN-D05/Gate-Level-Perceptron/main/Detector_v0.1)
