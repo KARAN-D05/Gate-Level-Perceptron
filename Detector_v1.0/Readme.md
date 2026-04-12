@@ -71,7 +71,7 @@
 > That is structurally equivalent to a multi-input McCulloch–Pitts (MCP) neuron which operates as,
 > M ≥ θ -> Output = 1
 > M < θ -> Output = 0
-> The difference in inequality reflects a stricter decision criterion in my system.
+> The difference in inequality reflects a stricter decision criterion in my system so it only activates when the match count exceeds the threshold, not when it is equal.
 > This correspondence was not explicitly designed but emerged naturally from constructing a threshold-based decision-making system.
 > The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron.
 > The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
