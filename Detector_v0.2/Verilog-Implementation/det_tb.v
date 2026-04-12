@@ -28,18 +28,22 @@ module testbench;
       $dumpfile("sim.vcd");
       $dumpvars(0, testbench);
 
+      // in = Weight -> eq=1
       in = 16'hFFFF;
       weight = 16'hFFFF;
       #10;
 
+     // in ⊂ Weight -> sub=1
       in = 16'h0FFF;
       weight = 16'hFFFF;
       #10;
 
+     // weight ⊂ in -> super=1
       in = 16'hFFFF;
       weight = 16'hFF0F;
       #10;
 
+     // (in ⊄ weight)∧(in ⊅ weight)∧(in ≠ weight)∨(in ∩ weight = ∅)∨(in ∩ weight ≠ ∅) -> anti=1
       in = 16'h000F;
       weight = 16'hF000;
       #10;
