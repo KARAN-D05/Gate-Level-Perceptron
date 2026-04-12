@@ -1,3 +1,7 @@
+// ============================================================================
+//  eq_sub_recognition — Gate-Level Pattern Detector (v0.0)
+// ============================================================================
+
 module eq_sub_recognition(
     input [15:0] in,        // 4*4 Input Grid     
     input [15:0] weight,    // 4*4 Weights Grid 
