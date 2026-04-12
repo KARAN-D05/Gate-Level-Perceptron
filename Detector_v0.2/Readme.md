@@ -7,7 +7,7 @@
    - Super-pattern: Input pattern is a superset of weight pattern
      - A<sub>rc</sub> ⊃ W<sub>rc</sub>
    - Anti-pattern: Input pattern is neither sub-pattern nor super-pattern nor equivalence of weight pattern
-     - A<sub>rc</sub> ⊈ W<sub>rc</sub> ∧ A<sub>rc</sub> ⊉ W<sub>rc</sub> ∨ A<sub>rc</sub> ∩ W<sub>rc</sub> = ∅ ∨ A<sub>rc</sub> ∩ W<sub>rc</sub> ≠ ∅ 
+     - A<sub>rc</sub> ⊈ W<sub>rc</sub> ∧ A<sub>rc</sub> ⊉ W<sub>rc</sub>
 
 <p align="center">
   <img src="Images/super pattern.png" alt="Pattern Detector Output" width="1000">
