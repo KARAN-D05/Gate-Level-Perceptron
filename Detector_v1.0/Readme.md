@@ -18,11 +18,11 @@
    - Based on the value of θ, we can implement any logic gate like AND, OR
    - For AND gate θ = 2, so the neuron will only output 1 if both the inputs are 1. ( 1(A) + 1(B) ≥ 2(θ) ), similarly for OR gate θ = 1
 - The POP-Count based Detector's subsystem consisting of Pop-counter, Threshold pins, Decision-Maker is isomorphic to the MCP Neuron
-   - 16 Inputs from XNOR grid to pop-counter is biologically equivalent to the Dendrites
-   - The POP-Counter is biologically equivalent to the Cell Body
-   - Decision-Maker is biologically equivalent to whether an electrical signal is sent or not based on the threshold
-   - The Output LED is biologically equivalent to the axon
-- Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during pattern recognition
+   - 16 Inputs from XNOR grid to pop-counter is equivalent to the Dendrites
+   - The POP-Counter is equivalent to the Cell Body
+   - Decision-Maker is equivalent to whether an electrical signal is sent or not based on the threshold
+   - The Output LED is equivalent to the axon
+- Even though my machine fires/recognizes if M is strictly greater than θ, for ensuring more confidence during decison-making
 - [Verilog & Python Implementation of McCulloch-Pitts Neuron](https://github.com/KARAN-D05/Artificial-Neuron)
 
 ## 👥 Population Counter
@@ -47,6 +47,13 @@
  Wallace Tree Based Population Counter - Parallel & Faster Reduction of Multiple Bits
 </p>
 
+## ⚖️ XNOR Equivalence Grid
+- It is a 4×4 grid made up of 16 XNOR logic gates, each gate performs: A<sub>rc</sub> ⊙ O<sub>rc</sub>​
+- A<sub>rc</sub> -> Input Grid
+- O<sub>rc</sub> -> Reference Grid
+- XNOR gate goes high if both of its inputs are equal hence a pixel match.
+- Outputs of the grid are fed into the population counter, which counts the total number of matched pixels.
+
 ## 🏛️ Decision-Maker
 - It is the brain of the machine, it decides if the input pattern is recognized or not.
 - For pattern recognition the total number of matched pixels(M) should be strictly greater than the threshold(θ)
@@ -56,7 +63,10 @@
 - It is essentially a Priority-Encoded Magnitude Comparator that goes high if M is greater than θ
  - **Setting the Threshold(θ):** Use T-pins/Threshold pins to set the threshold as required: (T8 T4 T2 T1), eg:1001 sets the threshold to 9
  - Threshold is not fixed, thus giving us the ability to adjust it accordingly
-  
+
+``
+The 16-Input Lines from XNOR-Equivalence grid being fed into the population counter and summed to be compared against a variable threshold determining the decision is essentially a multi-input MCP Neuron. The correspondence was not explicitly designed but emerget naturally from contructing threshold-based decision-making system.
+``
 <p align="center">
   <img src="images/Recognition.png" alt="Recognition" width="900">
 </p>
@@ -73,15 +83,6 @@
   θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
 </p>
 
-## ⚖️ XNOR Equivalence Grid
-- It is a 4×4 grid made up of 16 XNOR logic gates, each gate performs: A<sub>rc</sub> ⊙ O<sub>rc</sub>​
-- A<sub>rc</sub> -> Input Grid
-- O<sub>rc</sub> -> Reference Grid
-- XNOR gate goes high if both of its inputs are equal hence a pixel match.
-- Outputs of the grid are fed into the population counter, which counts the total number of matched pixels.
-
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
 - It is a proof of Concept for self learning machines, in which they can based on feedback adjust their threshold values automatically until they converge to a threshold that correctly classifies input patterns.
-
-
