@@ -12,7 +12,7 @@
 
 ## 🔲Input Grid
 - A 4×4 Grid used to input the pattern which is visible through the LED Grid.
-  - A<sub>rc</sub> is the Input grid element, where 3&le;r&le;0 and 3&le;c&le;0.
+  - A<sub>rc</sub> is the Input grid element, where 0&le;r&le;3 and 0&le;c&le;3.
   - A-W Link exists between each individual element of input grid to the element of weight grid, A<sub>rc</sub>-W<sub>rc</sub>.
 
 ## #️⃣Weight Grid
