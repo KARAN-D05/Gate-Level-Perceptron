@@ -49,7 +49,7 @@ module testbench;
     #10;
 
     $finish;
-    $display("Simulation Complete!");
+    $display("Simulation Complete !");
   
   end
 endmodule
