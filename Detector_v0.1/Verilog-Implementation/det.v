@@ -15,7 +15,7 @@ module eq_super_recognition(
   assign wco = ( ((~inaw) & (~weight)) | (inaw & weight) );   // 16 Wires carrying XNOR/Equivalence Checks for (weights XNOR inaw), for rc=00,01,02,03,.....,33
 
   always@(*) begin
-    if (&wco) begin // If all the pixels between in and inaw match we get recognition 
+      if (&wco) begin // If all the pixels between weights and inaw match we get recognition 
         recognition = 1;
     end else begin
         recognition = 0;
