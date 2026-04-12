@@ -56,6 +56,6 @@
 - My attempt at a perceptron ended up as a binary pixel filter + comparator. **Basically v0.0 is a machine the George Orwell's 1984 Thought Police would approve of 😂**.
 
 ## 🔮Next Version 
-- Reverses the Mathematical behaviour of current version(A<sub>rc</sub> &subseteq; W<sub>rc</sub>) for recognition to A<sub>rc</sub> ⊇ W<sub>rc</sub>.
+- Alters the Mathematical behaviour of current version(A<sub>rc</sub> &subseteq; W<sub>rc</sub>) for recognition to A<sub>rc</sub> ⊇ W<sub>rc</sub>.
 - Recognizes Equivalence and Super-Patterns.
 - [Check this out](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v0.1)
