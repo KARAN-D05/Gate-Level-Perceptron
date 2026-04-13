@@ -1,4 +1,3 @@
 detector-manual.c linguist-documentation=true
 download_repos.sh linguist-documentation=true
 download_repos.bat linguist-documentation=true
-run-detector-manual.ps1 linguist-documentation=true
