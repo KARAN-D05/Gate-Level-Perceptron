@@ -76,6 +76,15 @@
     <p> Equivalence & Super & Sub & Anti-Pattern Recognition 🔹🟦 </p>
 </div>
 
+- [Detector_v1.0](Detector_v1.0/Verilog-Implementation)
+
+<div align="center">
+    <img src="Detector_v1.0/Verilog-Implementation/images/waveform.png" 
+         alt="Pattern Detector Output" 
+         width="1500">
+    <p> Manually Alterable Decision Boundary ⚖️ </p>
+</div>
+
 ## 🛠️Current Development:
  - Population Counter Developed and operation verified ✓
  - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
