@@ -89,13 +89,6 @@
     <p> Manually Alterable Decision Boundary ⚖️ </p>
 </div>
 
-## 🛠️Current Development:
- - Population Counter Developed and operation verified ✓
- - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
- - Pop-Count based pattern detector developed and tested ✓
- - Detector Version 0 series implemented in Verilog ✓
- - Detector Version 1.0 implemented in Verilog ✓
-
 ## 🔜 Future Version - Feedback-Driven Adaptive Learning System
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
@@ -113,6 +106,13 @@
 | Hardware Complexity | Low - decrementer only | Higher - incrementer + decrementer + decision logic |
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
+
+## 🛠️Current Development:
+ - Population Counter Developed and operation verified ✓
+ - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
+ - Pop-Count based pattern detector developed and tested ✓
+ - Detector Version 0 series implemented in Verilog ✓
+ - Detector Version 1.0 implemented in Verilog ✓
 
 ## ⬇️ Download This Repository
 
