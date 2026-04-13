@@ -16,10 +16,8 @@
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
 
-<p align="center">
-  <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="1500">
-</p>
+## ⏱️ Correction-Speed-Complexity: MIDS VS SATU
 
 <p align="center">
-  ⏱️ Correction-Speed-Complexity: MIDS(O(N)) VS SATU(O(1))
+  <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="800">
 </p>
