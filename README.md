@@ -101,7 +101,7 @@
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
 - It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries.
 
-## 🧠 Learning Algorithms 
+## 🧠 Adaptive Learning Algorithms 
 - Max-Initialized Decremental Search (MIDS)
 - State Aware Thrshold Update (SATU)
 
