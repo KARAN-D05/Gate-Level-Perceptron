@@ -89,11 +89,6 @@
     <p> Manually Alterable Decision Boundary ⚖️ </p>
 </div>
 
-## 🔜 Future Version - Feedback-Driven Adaptive Learning System
-- Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
-- Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
-- It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries.
-
 ## 🧠 Adaptive Learning Algorithms 
 - [Max-Initialized Decremental Search (MIDS)](Detector_v1.1/Max-Initialized%20Decremental%20Search)
 - [State Aware Thrshold Update (SATU)](Detector_v1.1/State%20Aware%20Threshold%20Update)
