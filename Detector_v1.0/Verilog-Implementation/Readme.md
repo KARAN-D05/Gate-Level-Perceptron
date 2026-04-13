@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/waveform.png" alt="Manually-Alterable Decision Boundary" width="900">
+  <img src="images/waveform.png" alt="Manually-Alterable Decision Boundary" width="1200">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="images/output.png" alt="Manually-Alterable Decision Boundary" width="900">
+  <img src="images/output.png" alt="Manually-Alterable Decision Boundary" width="1500">
 </p>
 
 <p align="center">
