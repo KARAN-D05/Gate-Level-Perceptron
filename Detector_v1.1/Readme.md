@@ -1,7 +1,7 @@
 # 🔄 Feedback-Driven Adaptive Learning 
-- Introduces feedback-driven adaptation on top of popcount based judgement system with alterable decision boundary.
+- Introduces feedback-driven adaptation on top of [popcount based judgement system with manually alterable decision boundary](../Detector_v1.0)
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold to correct the recognition output.
-- It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries.
+- It would form basis of a cybernetic self-learning adaptive system that would be capable of altering its decision boundaries.
 
 ## 🧠 Adaptive Learning Algorithms 
 - [Max-Initialized Decremental Search (MIDS)](Max-Initialized%20Decremental%20Search)
