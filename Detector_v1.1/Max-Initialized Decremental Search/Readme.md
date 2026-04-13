@@ -17,7 +17,7 @@ bounded search from ceiling to correction.
 **Complexity:** O(N) - worst case 15 clock cycles if correction 
 occurs at threshold 0.
 
-**Hardware:** Minimal — a decrementer and a cell pointer. 
+**Hardware:** Minimal - a decrementer and a cell pointer. 
 No incrementer, no thinking module, no state awareness required.
 
 **Tradeoff:** Simplicity and minimal area at the cost of 
