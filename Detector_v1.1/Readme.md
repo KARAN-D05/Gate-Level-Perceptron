@@ -15,3 +15,11 @@
 | Hardware Complexity | Low - decrementer only | Higher - incrementer + decrementer + decision logic |
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
+
+<p align="center">
+  <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="1500">
+</p>
+
+<p align="center">
+  ⏱️ Correction-Speed-Complexity: MIDS(O(N)) VS SATU(O(1))
+</p>
