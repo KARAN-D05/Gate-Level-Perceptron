@@ -16,7 +16,7 @@
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
 
-## ⏱️ Correction Speed Complexity Comparision
+## ⏱️ Correction Speed Complexity Comparison
 
 <p align="center">
   <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="600">
