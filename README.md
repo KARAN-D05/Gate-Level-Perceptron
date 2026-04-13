@@ -105,7 +105,7 @@
 </p>
 
 <p align="center">
-  ⏱️ Correction Speed Complexity Comparision
+  ⏱️ Correction Speed Complexity Comparison
 </p>
 
 
