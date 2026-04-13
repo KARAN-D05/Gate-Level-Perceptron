@@ -49,6 +49,8 @@
 </p>
 
 ## 💻 Verilog Implementation
+
+#### 🎯 Strict Boolean Matching
 - [Detector_v0.0](Detector_v0.0/Verilog-Implementation)
 
 <div align="center">
@@ -75,6 +77,8 @@
          width="1500">
     <p> Equivalence & Super & Sub & Anti-Pattern Recognition 🔹🟦 </p>
 </div>
+
+#### 🔄 Popcount-Based Adaptive Learning
 
 - [Detector_v1.0](Detector_v1.0/Verilog-Implementation)
 
