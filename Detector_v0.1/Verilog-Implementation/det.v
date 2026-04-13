@@ -1,5 +1,5 @@
 // ======================================================================
-//  eq_super_recognition  - Detects Equivalence and super-patterns (v0.1)
+//  eq_super_recognition - Detects Equivalence and super-patterns (v0.1)
 // ======================================================================
 
 module eq_super_recognition(
