@@ -19,8 +19,8 @@
 
 ## 📈 Planned Progression
 - **Stage 0 (v0.x)**: Strict Boolean pattern relation analyzer. No learning, no noise tolerance, decision boundaries fixed by structural wiring.
-- **Stage 1 (v1.0)**: Popcount based similarity and a variable threshold to alter the decision boundary. Introduces noise tolerance and ability to change the decision output without structural changes. **`⟵ WE ARE HERE`**
-- **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System will itself alter its decision boundaries based on external feedback to correct its decision output.
+- **Stage 1 (v1.0)**: Popcount based similarity and a variable threshold to alter the decision boundary. Introduces noise tolerance and ability to change the decision output without structural changes.
+- **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System will itself alter its decision boundaries based on external feedback to correct its decision output. **`⟵ Under Development`**
 - **Stage 3 (v2.x)**: A System that generalizes on training data and based on that makes decisions about unseen data.
 
 ## 🧱 Versions Built
