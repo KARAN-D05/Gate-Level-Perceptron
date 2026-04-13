@@ -11,7 +11,7 @@ reverses and correction is achieved.
 
 The core insight is that starting from maximum coverage guarantees 
 the search will encounter the correction boundary regardless of 
-where it lies. No decision logic, no state comparison — just a 
+where it lies. No decision logic, no state comparison, just a 
 bounded search from ceiling to correction.
 
 **Complexity:** O(N) - worst case 15 clock cycles if correction 
