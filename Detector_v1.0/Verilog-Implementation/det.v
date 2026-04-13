@@ -1,6 +1,6 @@
-// =============================================================================
-//  Popcount based decision-making + manually alterable decision boundary (v1.0)
-// ============================================================================-
+// ======================================================================================================
+//  Popcount based decision-making + manually alterable decision boundary using variable threshold (v1.0)
+// ======================================================================================================
 
 module popcount (
   input [15:0] in,       // 4*4 Input Grid
@@ -29,7 +29,7 @@ module popcount (
 // M < θ -> OUT=0
 // M = θ -> OUT=0
  always @(*) begin
-  if (count > thresh) begin
+   if (count > thresh) begin  // If matched pixels are strictly greater than threshold the system recognizes the pattern else no recognition
     recognition = 1;
   end else begin
     recognition = 0;
