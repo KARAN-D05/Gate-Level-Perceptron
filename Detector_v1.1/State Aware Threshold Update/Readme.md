@@ -10,7 +10,7 @@ matched pixel count. A dedicated thinking module then evaluates
 the current output against the desired output and decides whether 
 to increment or decrement the threshold by one step.
 
-The result is immediate boundary correction - one step in the 
+The result is immediate boundary correction, one step in the 
 right direction is always sufficient to reverse the output and 
 achieve correction.
 
