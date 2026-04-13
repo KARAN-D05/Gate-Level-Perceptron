@@ -1,3 +1,7 @@
+// =============================================================================
+//  Popcount based decision-making + manually alterable decision boundary (v1.0)
+// ============================================================================-
+
 module popcount (
   input [15:0] in,       // 4*4 Input Grid
   input [15:0] ref,      // 4*4 reference grid
