@@ -93,14 +93,6 @@
 - [Max-Initialized Decremental Search (MIDS)](Detector_v1.1/Max-Initialized%20Decremental%20Search)
 - [State Aware Threshold Update (SATU)](Detector_v1.1/State%20Aware%20Threshold%20Update)
 
-<p align="center">
-  <img src="Detector_v1.1/images/Speed_Complexity.png" alt="Correction Speeds" width="600">
-</p>
-
-<p align="center">
-  ⏱️ Correction Speed Complexity Comparision
-</p>
-
 | Property | MIDS | SATU |
 |---|---|---|
 | Correction Speed | O(N) | O(1) |
@@ -109,6 +101,15 @@
 | Hardware Complexity | Low - decrementer only | Higher - incrementer + decrementer + decision logic |
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
+
+<p align="center">
+  <img src="Detector_v1.1/images/Speed_Complexity.png" alt="Correction Speeds" width="800">
+</p>
+
+<p align="center">
+  ⏱️ Correction Speed Complexity Comparision
+</p>
+
 
 ## 🛠️Current Development:
  - Population Counter Developed and operation verified ✓
