@@ -103,7 +103,7 @@
 | Guaranteed Convergence | Yes | Yes |
 
 <p align="center">
-  <img src="Detector_v1.1/images/Speed_Complexity.png" alt="Correction Speeds" width="800">
+  <img src="Detector_v1.1/images/Speed_Complexity.png" alt="Correction Speeds" width="700">
 </p>
 
 <p align="center">
