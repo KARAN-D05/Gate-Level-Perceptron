@@ -94,11 +94,16 @@
  - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
  - Pop-Count based pattern detector developed and tested ✓
  - Detector Version 0 series implemented in Verilog ✓
+ - Detector Version 1.0 implemented in Verilog ✓
 
 ## 🔜 Future Version - Feedback-Driven Adaptive Learning System
 - Feedback-driven adaptation on top of the existing popcount-based judgement mechanism.
 - Automatic threshold adjustment based on feedback which would allow the detector to gradually converge towards an appropriate threshold.
-- It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries. 
+- It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries.
+
+## 🧠 Learning Algorithms 
+- Max-Initialized Decremental Search (MIDS)
+- State Aware Thrshold Update (SATU)
 
 ## ⬇️ Download This Repository
 
