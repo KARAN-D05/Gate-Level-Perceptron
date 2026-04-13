@@ -6,11 +6,13 @@ module popcount (
 );
 
  wire [15:0] incref; // in COMPARE ref
- reg [4:0] count;
+ reg [4:0] count; // Matched Pixels
  integer i;
 
+// XNOR-Equivalence Grid
  assign incref = ( ((~in)&(~ref)) | (in & ref) ); // incref = in XNOR ref
 
+// Population Counter
  always @(*) begin
   count = 0;
   for (i = 0; i < 16; i = i + 1) begin
@@ -18,6 +20,10 @@ module popcount (
   end
  end
 
+// System Activation Function
+// M > θ -> OUT=1
+// M < θ -> OUT=0
+// M = θ -> OUT=0
  always @(*) begin
   if (count > thresh) begin
     recognition = 1;
