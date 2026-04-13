@@ -4,8 +4,8 @@
 - It would form basis of simple self-learning adaptive system that would be capable of altering its decision boundaries.
 
 ## 🧠 Adaptive Learning Algorithms 
-- [Max-Initialized Decremental Search (MIDS)](Max-Initialized Decremental Search)
-- [State Aware Thrshold Update (SATU)](State Aware Threshold Update)
+- [Max-Initialized Decremental Search (MIDS)](Max-Initialized%20Decremental%20Search)
+- [State Aware Thrshold Update (SATU)](State%20Aware%20Threshold%20Update)
 
 | Property | MIDS | SATU |
 |---|---|---|
