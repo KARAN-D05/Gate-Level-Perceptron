@@ -1,7 +1,7 @@
 module popcount (
   input [15:0] in,       // 4*4 Input Grid
   input [15:0] ref,      // 4*4 reference grid
-  input [3:0] thresh,    // decision-making parameter
+  input [3:0] thresh,    // decision-making parameter, can be varied to alter system decision boundary
   output reg recognition // Recognition Output
 );
 
@@ -16,7 +16,7 @@ module popcount (
  always @(*) begin
   count = 0;
   for (i = 0; i < 16; i = i + 1) begin
-    count = count + incref[i]; // sum total number of matched pixels
+    count = count + incref[i]; // sum total number of matched pixels to compare against the variable threshold
   end
  end
 
