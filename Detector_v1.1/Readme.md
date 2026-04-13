@@ -19,5 +19,5 @@
 ## ⏱️ Correction-Speed-Complexity: MIDS VS SATU
 
 <p align="center">
-  <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="800">
+  <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="500">
 </p>
