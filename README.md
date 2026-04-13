@@ -91,7 +91,7 @@
 
 ## 🧠 Adaptive Learning Algorithms 
 - [Max-Initialized Decremental Search (MIDS)](Detector_v1.1/Max-Initialized%20Decremental%20Search)
-- [State Aware Thrshold Update (SATU)](Detector_v1.1/State%20Aware%20Threshold%20Update)
+- [State Aware Threshold Update (SATU)](Detector_v1.1/State%20Aware%20Threshold%20Update)
 
 | Property | MIDS | SATU |
 |---|---|---|
