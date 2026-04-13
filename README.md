@@ -105,6 +105,15 @@
 - Max-Initialized Decremental Search (MIDS)
 - State Aware Thrshold Update (SATU)
 
+| Property | MIDS | SATU |
+|---|---|---|
+| Correction Speed | O(N) — up to 15 cycles | O(1) — single cycle |
+| State Awareness | None | Current & desired output |
+| Direction | Always starts from max, decrements | Increments or decrements as needed |
+| Hardware Complexity | Low — decrementer only | Higher — incrementer + decrementer + decision logic |
+| Area | Minimal | Larger |
+| Guaranteed Convergence | Yes | Yes |
+
 ## ⬇️ Download This Repository
 
 ### 🪟 Windows
