@@ -24,7 +24,7 @@ module sub_super_multi_pov(
   
   assign inaw = in & weight; // 16 Wires carrying result of (INrc ^ WEIGHTrc), for rc=00,01,02,03,10,....,33
     
-    assign inco = ( ((~in) & (~inaw) ) | ( in & inaw ) ); // 16 Wires carrying XNOR/Equivalence Checks for (IN XNOR inaw), for rc=00,01,02,03,.....,33
+  assign inco = ( ((~in) & (~inaw) ) | ( in & inaw ) ); // 16 Wires carrying XNOR/Equivalence Checks for (IN XNOR inaw), for rc=00,01,02,03,.....,33
 
 
 // EQ-SUB RECOGNITION
