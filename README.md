@@ -107,7 +107,7 @@
 
 | Property | MIDS | SATU |
 |---|---|---|
-| Correction Speed | O(N) — up to 15 cycles | O(1) — single cycle |
+| Correction Speed | O(N) | O(1) |
 | State Awareness | None | Current & desired output |
 | Direction | Always starts from max, decrements | Increments or decrements as needed |
 | Hardware Complexity | Low — decrementer only | Higher — incrementer + decrementer + decision logic |
