@@ -25,21 +25,24 @@ correction speed.
 
 ## Convergence Proof:
 
-Decision Flipping Space:
+#### Decision Flipping Space:
 For a given M, the Decision Flipping Space is defined as:
 
+```
 DFS⁺(M) = M - 1 = threshold value that flips output to recognition
 DFS⁻(M) = M = threshold value that flips output to non-recognition
+```
 
-DFS existence for valid M
-For all M ∈ {1, 2, ..., 15}:
-DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} ✓
-DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15} ✓
+>DFS existence for valid M
+>For all M ∈ {1, 2, ..., 15}:
+>DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} ✓
+>DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15} ✓
 
-Therefore both DFS values exist within valid threshold range for all valid M. 
-Therefore MIDS always converges.
+- Therefore both DFS values exist within valid threshold range for all valid M. 
+- Therefore MIDS always converges.
 
-Edge cases excluded by design:
-
-M = 0: Non-recognition always. No meaningful flip desired.
-M = 16: Recognition always. No meaningful flip desired.
+>```
+>Edge cases excluded by design:
+>M = 0: Non-recognition always. No meaningful flip desired.
+>M = 16: Recognition always. No meaningful flip desired.
+>```
