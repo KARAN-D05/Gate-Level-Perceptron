@@ -23,26 +23,37 @@ No incrementer, no thinking module, no state awareness required.
 **Tradeoff:** Simplicity and minimal area at the cost of 
 correction speed.
 
-## Convergence Proof:
+## 🎯 Convergence Proof:
 
-#### Decision Flipping Space:
+### Decision Flipping Space(DFS):
 For a given M, the Decision Flipping Space is defined as:
 
 ```
+Threshold Range: θ ∈ {0, ..., 15}
+
 DFS⁺(M) = M - 1 = threshold value that flips output to recognition
 DFS⁻(M) = M = threshold value that flips output to non-recognition
+
+DFS existence for valid M
+For all M ∈ {1, 2, ..., 15}:
+DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} 
+DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
+
+MIDS operates as:
+θₙ₊₁ = θₙ - 1
+This generates a strictly decreasing sequence:
+15→14→⋯→0
+
+Since:
+θ traverses all values in [15→0] and DFS⁺(M), DFS⁻(M) ⊆ {0, ..., 15}
+MIDS is guaranteed to hit the required flipping threshold in finite steps
+
 ```
 
->DFS existence for valid M
->For all M ∈ {1, 2, ..., 15}:
->DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} ✓
->DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15} ✓
+- Since a valid decision-flipping threshold always exists for all valid M, and MIDS monotonically traverses the entire threshold space, the algorithm is guaranteed to reach a flipping point in finite time. Therefore, MIDS always converges.
+- Worst-case convergence occurs when the flipping threshold is at θ = 0, yielding O(N) complexity where N is the threshold range.
 
-- Therefore both DFS values exist within valid threshold range for all valid M. 
-- Therefore MIDS always converges.
-
->```
->Edge cases excluded by design:
->M = 0: Non-recognition always. No meaningful flip desired.
->M = 16: Recognition always. No meaningful flip desired.
->```
+- `Edge cases excluded by design`:
+  - M = 0: Non-recognition always. No meaningful flip desired.
+  - M = 16: Recognition always. No meaningful flip desired.
+  - In both cases, no decision boundary exists within the threshold space, hence no correction is possible or required.
