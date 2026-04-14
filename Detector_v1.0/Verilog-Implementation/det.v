@@ -14,7 +14,7 @@ module popcount (
  integer i;
 
 // XNOR-Equivalence Grid
- assign incref = ( ((~in)&(~ref)) | (in & ref) ); // incref = in XNOR ref
+  assign incref = ( ((~in) & (~ref)) | (in & ref) ); // incref = in XNOR ref
 
 // Population Counter
  always @(*) begin
