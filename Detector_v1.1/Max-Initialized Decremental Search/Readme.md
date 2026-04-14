@@ -28,16 +28,10 @@ correction speed.
 System Activation Function: R(M, θ) = 1 if M > θ, else 0
 Threshold Range: θ ∈ {0, ..., 15}
 
----
-
 Decision Flipping Space(DFS):
-
 For a given M, the Decision Flipping Space is defined as:
-
 DFS⁺(M) = M - 1 = threshold value that flips output to recognition
 DFS⁻(M) = M = threshold value that flips output to non-recognition
-
----
 
 DFS existence for valid M
 For all M ∈ {1, 2, ..., 15}:
@@ -46,17 +40,11 @@ DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
 
 ⇒ Valid decision-flipping spaxes always exist.
 
----
-
 MIDS operates as:
-
 θₙ₊₁ = θₙ - 1
 
 This generates a strictly decreasing sequence:
-
 15→14→⋯⋯→0
-
----
 
 Since:
 θ traverses all values in [15→0] and DFS⁺(M), DFS⁻(M) ⊆ {0, ..., 15}
