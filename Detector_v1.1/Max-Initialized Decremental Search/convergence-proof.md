@@ -1,15 +1,19 @@
 ## 🎯 Convergence Proof:
 ```
-System Activation Function: R(M, θ) = 1 if M > θ, else 0
+System Activation Function:
+R(M, θ) = 1 if M > θ, else 0
+
 Threshold Range: θ ∈ {0, ..., 15}
 
 Decision Flipping Space(DFS):
 For a given M, the Decision Flipping Space is defined as:
+
 DFS⁺(M) = M - 1 = threshold value that flips output to recognition
 DFS⁻(M) = M = threshold value that flips output to non-recognition
 
 DFS existence for valid M
 For all M ∈ {1, 2, ..., 15}:
+
 DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} 
 DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
 
