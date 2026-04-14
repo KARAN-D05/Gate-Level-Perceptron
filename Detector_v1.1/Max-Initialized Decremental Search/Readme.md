@@ -42,6 +42,7 @@ DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
 
 MIDS operates as:
 θₙ₊₁ = θₙ - 1
+starting from θ = 15
 
 This generates a strictly decreasing sequence:
 15→14→⋯⋯→0
