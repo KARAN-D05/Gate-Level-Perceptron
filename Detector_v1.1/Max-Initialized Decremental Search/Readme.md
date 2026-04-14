@@ -38,7 +38,7 @@ For all M ∈ {1, 2, ..., 15}:
 DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} 
 DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
 
-⇒ Valid decision-flipping spaces always exist.
+⇒ Valid decision-flipping spaces always exist inside the Threshold Range: θ ∈ {0, ..., 15}
 
 MIDS operates as:
 θₙ₊₁ = θₙ - 1
