@@ -24,12 +24,15 @@ No incrementer, no thinking module, no state awareness required.
 correction speed.
 
 ## 🎯 Convergence Proof:
-
-### Decision Flipping Space(DFS):
+Decision Flipping Space(DFS):
 For a given M, the Decision Flipping Space is defined as:
 
 ```
+System Activation Function: R(M, θ) = 1 if M > θ, else 0
 Threshold Range: θ ∈ {0, ..., 15}
+
+Decision Flipping Space(DFS):
+For a given M, the Decision Flipping Space is defined as:
 
 DFS⁺(M) = M - 1 = threshold value that flips output to recognition
 DFS⁻(M) = M = threshold value that flips output to non-recognition
