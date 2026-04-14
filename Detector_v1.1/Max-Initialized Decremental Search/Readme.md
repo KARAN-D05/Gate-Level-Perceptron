@@ -38,7 +38,7 @@ For all M ∈ {1, 2, ..., 15}:
 DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} 
 DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
 
-⇒ Valid decision-flipping spaxes always exist.
+⇒ Valid decision-flipping spaces always exist.
 
 MIDS operates as:
 θₙ₊₁ = θₙ - 1
