@@ -109,11 +109,10 @@
 </div>
 
 ## 🛠️Current Development:
- - Population Counter Developed and operation verified ✓
- - Comparator Developed for comparing the Pop-count(M) with the threshold(θ) to make decisions ✓
- - Pop-Count based pattern detector developed and tested ✓
- - Detector Version 0 series implemented in Verilog ✓
- - Detector Version 1.0 implemented in Verilog ✓
+- Detector Version 1.0 implemented in Verilog ✓
+- Threshold memory / search space which system traverses to correct its decision output developed ✓
+- Sequencer-controlled down counter which updates the pointer and implements traversal developed ✓
+- Address-deocders to decode the input from down-counter developed ✓
 
 ## ⬇️ Download This Repository
 
