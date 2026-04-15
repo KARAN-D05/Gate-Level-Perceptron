@@ -17,7 +17,6 @@
 | Guaranteed Convergence | Yes | Yes |
 
 ## ⏱️ Correction Speed Complexity Comparison
-- **Correction Speed**: Time it takes for the system to correct itself
 
 <p align="center">
   <img src="images/Speed_Complexity.png" alt="Speed-Complexity" width="600">
