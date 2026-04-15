@@ -45,7 +45,7 @@ This strict inequality introduces an asymmetry in how the decision boundary is c
 ## Why No Incrementer Is Needed
 
 - **To enable recognition:** The threshold must be strictly less than the match count M.  
-  The largest integer satisfying this is M − 1. This requires a **single decrement**.
+  The largest integer satisfying this is M - 1. This requires a **single decrement**.
 
 - **To disable recognition:** The threshold must be greater than or equal to M.  
   Setting θ = M satisfies this exactly. This corresponds to a **direct load** of M into the threshold register, requiring no arithmetic operation.
@@ -58,7 +58,7 @@ This strict inequality introduces an asymmetry in how the decision boundary is c
 | Component | Before Optimization | After Optimization |
 | :--- | :--- | :--- |
 | Arithmetic Units | Incrementer + Decrementer | **Decrementer only** |
-| Data Path | MUX selects Inc / Dec / Hold | MUX selects Load(M) / Load(M − 1) |
+| Data Path | MUX selects Inc / Dec / Hold | MUX selects Load(M) / Load(M - 1) |
 | Control FSM | Determine direction (up/down) | Determine desired output state |
 
 **Result:** Reduced gate count and simplified control logic with no loss of functionality.
@@ -67,4 +67,4 @@ This strict inequality introduces an asymmetry in how the decision boundary is c
 
 The choice of a strict inequality in the activation function encodes an asymmetry that aligns precisely with minimal hardware requirements.
 
-SATU achieves single-cycle adaptation using only a decrementer and a load path—demonstrating a direct alignment between mathematical structure and circuit-level efficiency.
+SATU achieves single-cycle adaptation using only a decrementer and a load path demonstrating a direct alignment between mathematical structure and circuit-level efficiency.
