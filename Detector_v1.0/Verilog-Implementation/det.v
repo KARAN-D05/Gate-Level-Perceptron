@@ -3,9 +3,9 @@
 // ======================================================================================================
 
 module popcount (
-  input [15:0] in,       // 4*4 Input Grid
-  input [15:0] ref,      // 4*4 reference grid
-  input [3:0] thresh,    // decision-making parameter, can be varied to alter system decision boundary
+  input [15:0] in,       // 4*4 Input Grid represented as a 16-Bit Vector
+  input [15:0] ref,      // 4*4 reference grid represented as a 16-Bit Vector
+  input [3:0] thresh,    // decision-making parameter, can be varied to alter system decision boundary based on system activation function -> R(M,θ) = 1, M > θ, else 0 
   output reg recognition // Recognition Output
 );
 
@@ -13,18 +13,19 @@ module popcount (
  reg [4:0] count; // Matched Pixels
  integer i;
 
-// XNOR-Equivalence Grid
+// XNOR-Equivalence Grid -> Outputs 16-Bit Vector
  assign incref = ( ((~in) & (~ref)) | (in & ref) ); // incref = in XNOR ref
 
 // Population Counter
  always @(*) begin
   count = 0;
   for (i = 0; i < 16; i = i + 1) begin
-    count = count + incref[i]; // sum total number of matched pixels to compare against the variable threshold
+    count = count + incref[i]; // sum total number of 1's in output of XNOR-Equivalence grid to get total number of matched pixels to compare against the variable threshold(θ)
   end
  end
 
-// System Activation Function
+// System Activation Function: R(M,θ) = 1, M > θ, else 0
+  
 // M > θ -> OUT=1
 // M < θ -> OUT=0
 // M = θ -> OUT=0
