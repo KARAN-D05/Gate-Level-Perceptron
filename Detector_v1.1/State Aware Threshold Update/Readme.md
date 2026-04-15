@@ -8,17 +8,17 @@ On receiving an error signal, SATU does not reset to maximum.
 Instead it points directly to the cell equivalent to the current 
 matched pixel count. A dedicated thinking module then evaluates 
 the current output against the desired output and decides whether 
-to increment or decrement the threshold by one step.
+to stay or decrement the threshold by one step.
 
-The result is immediate boundary correction, one step in the 
-right direction is always sufficient to reverse the output and 
+The result is immediate boundary correction, one step - stay or
+decremen is always sufficient to reverse the output and 
 achieve correction.
 
 **Complexity:** O(1) - correction always achieved in a single 
 clock cycle regardless of current threshold position.
 
-**Hardware:** A decrementer, an incrementer, a cell pointer, 
-and a thinking module that decides direction based on current 
+**Hardware:** A decrementer, a cell pointer, 
+and a thinking module that decides step based on current 
 and desired state. Higher area and logical complexity than MIDS.
 
 **Tradeoff:** Maximum correction speed at the cost of additional 
