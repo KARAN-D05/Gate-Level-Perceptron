@@ -11,7 +11,7 @@ the current output against the desired output and decides whether
 to stay or decrement the threshold by one step.
 
 The result is immediate boundary correction, one step - stay or
-decremen is always sufficient to reverse the output and 
+decrement is always sufficient to reverse the output and 
 achieve correction.
 
 **Complexity:** O(1) - correction always achieved in a single 
