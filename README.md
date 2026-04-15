@@ -109,10 +109,9 @@
 </div>
 
 ## 🛠️Current Development:
-- Detector Version 1.0 implemented in Verilog ✓
 - Threshold memory / search space which system traverses to correct its decision output developed ✓
 - FSM Sequencer-controlled down counter which updates the pointer and implements traversal developed ✓
-- Address-deocders to decode the input from down-counter developed ✓
+- Address-decoders to decode the input from down-counter to point to correct memory cell developed ✓
 
 ## ⬇️ Download This Repository
 
