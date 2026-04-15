@@ -54,7 +54,7 @@
 |---|---|---|
 | Correction Speed | O(N) | O(1) |
 | State Awareness | None | Current & desired output |
-| Direction | Always starts from max, decrements | Increments or decrements as needed |
+| Direction | Always starts from max, decrements | Sets to M or M-1 as needed |
 | Hardware Complexity | Low - decrementer only | Higher - decrementer + decision logic |
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
