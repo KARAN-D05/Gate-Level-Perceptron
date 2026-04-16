@@ -69,7 +69,7 @@ MIDS is guaranteed to hit the required flipping threshold in finite steps
 - Since a valid decision-flipping threshold always exists for all valid M, and MIDS monotonically traverses the entire threshold space, the algorithm is guaranteed to reach a flipping point in finite time. Therefore, MIDS always converges.
 - Worst-case convergence occurs when the flipping threshold is at θ = 0, yielding O(N) complexity where N is the threshold range.
 
-- `Edge cases excluded by design`:
+- `Edge cases excluded by design:`
   - M = 0: Non-recognition always. No meaningful flip desired.
   - M = 16: Recognition always. No meaningful flip desired.
   - In both cases, no decision boundary exists within the threshold space, hence no correction is possible or required.
