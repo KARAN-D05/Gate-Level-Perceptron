@@ -113,6 +113,7 @@
 - Threshold memory / search space which system traverses to correct its decision output developed ✓
 - FSM Sequencer-controlled down counter which updates the pointer and implements traversal developed ✓
 - Address-decoders to decode the input from down-counter to point to correct memory cell developed ✓
+- Threshold manual and automatic control integrated ✓
 
 ## ⬇️ Download This Repository
 
