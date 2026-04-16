@@ -31,6 +31,42 @@ Both recognition and non-recognition are achieved in constant time O(1), indepen
 
 Suitable when balanced and immediate correction is required, without preference toward false positives or false negatives.
 
+## 🎯 Convergence Proof
+```
+System Activation Function:
+R(M, θ) = 1 if M > θ, else 0
+
+Threshold Range: θ ∈ {0, ..., 15}
+
+Decision Flipping Space(DFS):
+For a given M, the Decision Flipping Space is defined as:
+
+DFS⁺(M) = M - 1 = threshold value that flips output to recognition
+DFS⁻(M) = M = threshold value that flips output to non-recognition
+
+DFS⁺(M) = M - 1 ∈ {0, 1, ..., 14} ⊆ {0, ..., 15} 
+DFS⁻(M) = M ∈ {1, 2, ..., 15} ⊆ {0, ..., 15}
+
+⇒ Valid decision-flipping spaces always exist inside the Threshold Range: θ ∈ {0, ..., 15}
+
+SATU operates as:
+θₙ₊₁ = M-1, if recognition is desired
+θₙ₊₁ = M, if non-recognition is desired
+
+Since:
+θₙ₊₁ is directly computed based decision logic, either DFS⁺(M) or DFS⁻(M),
+and DFS⁺(M), DFS⁻(M) ⊆ {0, ..., 15}
+
+SATU directly assigns the required flipping threshold in a single step
+```
+
+- Since a valid decision-flipping threshold always exists for all valid M, and SATU directly computes and assigns this threshold, the algorithm is guaranteed to reach a flipping point in one step. Therefore, SATU always converges.
+- Convergence occurs in exactly one step, yielding O(1) complexity
+- Edge cases excluded by design:
+  - M = 0: Non-recognition always. No meaningful flip desired.
+  - M = 16: Recognition always. No meaningful flip desired.
+  - In both cases, no decision boundary exists within the threshold space, hence no correction is possible or required. 
+
 ## 🧠 Design Insight: Eliminating the Incrementer via Strict Inequality
 
 ### The Strict Inequality Advantage
