@@ -57,12 +57,12 @@ Since:
 θₙ₊₁ is directly computed based decision logic, either DFS⁺(M) or DFS⁻(M),
 and DFS⁺(M), DFS⁻(M) ⊆ {0, ..., 15}
 
-SATU directly assigns the required flipping threshold in a single step
+SATU directly assigns the required flipping threshold in a single step guaranteeing convergence
 ```
 
 - Since a valid decision-flipping threshold always exists for all valid M, and SATU directly computes and assigns this threshold, the algorithm is guaranteed to reach a flipping point in one step. Therefore, SATU always converges.
 - Convergence occurs in exactly one step, yielding O(1) complexity
-- Edge cases excluded by design:
+- `Edge cases excluded by design:`
   - M = 0: Non-recognition always. No meaningful flip desired.
   - M = 16: Recognition always. No meaningful flip desired.
   - In both cases, no decision boundary exists within the threshold space, hence no correction is possible or required. 
