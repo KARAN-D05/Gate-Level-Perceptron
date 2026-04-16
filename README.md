@@ -60,6 +60,7 @@
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
 
+### 🎯 Convergence Proofs
 - [MIDS Convergence Proof](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/Max-Initialized%20Decremental%20Search#-convergence-proof)
 - [SATU Convergence Proof](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/State%20Aware%20Threshold%20Update#-convergence-proof)
 
