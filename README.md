@@ -60,7 +60,7 @@
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
 
-[MIDS Convergence Proof](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/Max-Initialized%20Decremental%20Search#-convergence-proof)
+- [MIDS Convergence Proof](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/Max-Initialized%20Decremental%20Search#-convergence-proof)
 
 <p align="center">
   <img src="Detector_v1.1/images/Speed_Complexity.png" alt="Correction Speeds" width="700">
