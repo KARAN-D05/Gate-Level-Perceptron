@@ -26,9 +26,9 @@ correction speed.
 ## 🎛️ Initialization Bias
 The system activation function R(M, θ) = 1 if M > θ, else 0 creates an inherent asymmetry that interacts with the algorithm's starting state.
 
-MIDS initializes θ = 15 which ensures M > θ is false for all valid M ≤ 15 , yielding a default output of 0 (Non-Recognition) for all M ∈ {0, ..., 15}. Consequently, any error requiring non-recognition output is corrected with zero latency - a strong bias towards caution resulting in instant correction for false positives while recognition requires traversal to θ = M - 1 with latency 15 - (M - 1). Preferable in systems where false positives must be minimized, as the default state is conservative (reject unless sufficient evidence).
+MIDS initializes θ = 15 which ensures M > θ is false for all valid M ≤ 15 , yielding a default output of 0 (Non-Recognition) for all M ∈ {0, ..., 15}. Consequently, any error requiring non-recognition output is corrected with zero latency - a strong bias towards caution resulting in instant correction for false positives while recognition requires traversal to θ = M - 1 with latency 15 - (M - 1). Preferable in systems where false positives must be corrected with zero latency.
 
-Conversely, if we initialize θ = 0 (LIDS, Least-initialized decremental search), it produces a default output of 1 (Recognition) for all M ∈ {1, ..., 15}, a strong bias towards eagerness and instant correction of false negatives. Preferable in systems where false negatives must be minimized, as the system is optimistic (accept unless strongly contradicted).
+Conversely, if we initialize θ = 0 (LIDS, Least-initialized decremental search), it produces a default output of 1 (Recognition) for all M ∈ {1, ..., 15}, a strong bias towards eagerness and instant correction of false negatives. Preferable in systems where false negatives must be corrected with zero latency.
 
 Formally, the Bias manifests as a subset of inputs for whcih correction latency is O(1) rather than worst case O(N).
 
