@@ -24,9 +24,16 @@ and desired state. Higher area and logical complexity than MIDS.
 **Tradeoff:** Maximum correction speed at the cost of additional 
 hardware complexity and silicon area.
 
-# 🧠 Design Insight: Eliminating the Incrementer via Strict Inequality
+## 🎛️ Initialization Bias
+SATU has no initialization bias, as it directly computes the required threshold from M: θ=M (non-recognition) or θ=M−1 (recognition).
 
-## The Strict Inequality Advantage
+Both recognition and non-recognition are achieved in constant time O(1), independent of any starting state.
+
+Suitable when balanced and immediate correction is required, without preference toward false positives or false negatives.
+
+## 🧠 Design Insight: Eliminating the Incrementer via Strict Inequality
+
+### The Strict Inequality Advantage
 
 The system's activation function is defined as:
 
@@ -35,14 +42,14 @@ R(M, θ) = 0  otherwise
 
 This strict inequality introduces an asymmetry in how the decision boundary is crossed.
 
-## Correction Logic Analysis
+### Correction Logic Analysis
 
 | Desired Output Transition | Required Condition | Direct Hardware Action |
 | :--- | :--- | :--- |
 | **Non-Recognition → Recognition** | M > θ must become true | Set θ ← M - 1 (decrement) |
 | **Recognition → Non-Recognition** | M > θ must become false | Set θ ← M (direct load) |
 
-## Why No Incrementer Is Needed
+### Why No Incrementer Is Needed
 
 - **To enable recognition:** The threshold must be strictly less than the match count M.  
   The largest integer satisfying this is M - 1. This requires a **single decrement**.
@@ -53,7 +60,7 @@ This strict inequality introduces an asymmetry in how the decision boundary is c
 - At no point does the threshold need to be increased beyond the current match count M to achieve a correct decision.  
   Therefore, **an incrementer is unnecessary**.
 
-## Hardware Implications
+### Hardware Implications
 
 | Component | Before Optimization | After Optimization |
 | :--- | :--- | :--- |
@@ -63,7 +70,7 @@ This strict inequality introduces an asymmetry in how the decision boundary is c
 
 **Result:** Reduced gate count and simplified control logic with no loss of functionality.
 
-## Conclusion
+### Conclusion
 
 The choice of a strict inequality in the activation function encodes an asymmetry that aligns precisely with minimal hardware requirements.
 
