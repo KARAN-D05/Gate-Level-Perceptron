@@ -12,7 +12,7 @@
 | Correction Speed | O(N) | O(1) |
 | State Awareness | None | Current & desired output |
 | Direction | Always starts from max, decrements | Sets to M or M-1 as needed |
-| Initialization Bias | Instant correction for false-positives | None |
+| Initialization Bias | Instant correction for false positives | None |
 | Hardware Complexity | Low - decrementer only | Higher - decrementer + decision logic |
 | Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
