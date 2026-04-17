@@ -32,6 +32,8 @@ correction speed.
 </p>
 
 ```
+                         EXECUTION TRACE
+
       1) Initial State θ = 12, M = 8, M < θ, Recogntion -> 0
       2) Error_In pressed to signal error to the system
       3) System takes over control and starts inmplementing MIDS, initialize to 15 and decrements until output correction
