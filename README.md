@@ -32,7 +32,7 @@
 
 - **`Version 1`**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check and cybernetic feedback-driven adaptive learning. 
   - [Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold which can vary giving us ability to control the decision output.
-  - [Detector_v1.1](Detector_v1.1) -> Autonomously alters its decision boundary based on error feedback to correct its output.
+  - [Detector_v1.1](Detector_v1.1) -> Autonomously alters its decision boundary based on error feedback to correct its output implementing different algorithms optimzed for different hardware needs.
 
 <p align="center">
   <img src="Detector_v1.0/images/Recognition.png" alt="Recognition" width="900">
