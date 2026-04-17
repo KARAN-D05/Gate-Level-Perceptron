@@ -5,7 +5,7 @@
 - `Progress:`Implemented a hardware-level binary classifier, transitioning from strict Boolean matching to threshold-based decision logic capable of its decision boundary alteration, laying the foundation for feedback-driven adaptive learning and a pre-requisite for generalization.
 
 <p align="center">
-  <img src="Detector_v1.0/images/Block-Diagram.png" alt="Block Diagram" width="1500">
+  <img src="Detector_v1.1/Max-Initialized%20Decremental%20Search/Videos/Cybernetic%20Feedback-Driven%20Adaptive%20Learning.gif" alt="Block Diagram" width="1500">
 </p>
 
 <p align="center">
