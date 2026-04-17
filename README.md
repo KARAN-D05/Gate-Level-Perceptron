@@ -35,19 +35,11 @@
   - [Detector_v1.1](Detector_v1.1) -> A feedback-driven adaptive system that autonomously adjusts its decision boundary to correct its output, using algorithms optimized for hardware constraints.
     
 <p align="center">
-  <img src="Detector_v1.0/images/Recognition.png" alt="Recognition" width="900">
+  <img src="Detector_v1.0/images/Block-Diagram.png" alt="Block-Diagram" width="900">
 </p>
 
 <p align="center">
-  Detector_v1.0, θ = 7 & M = 8, M > θ: hence Pattern is recognized ✅
-</p>
-
-<p align="center">
-  <img src="Detector_v1.0/images/Non-Recognition.png" alt="Non-Recognition" width="900">
-</p>
-
-<p align="center">
-  Detector_v1.0, θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌
+ 🧩 Block Diagram - Detector_v1.0 (Manually Alterable Decision Boundary)
 </p>
 
 ## 🧠 Adaptive Learning Algorithms 
