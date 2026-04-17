@@ -30,15 +30,16 @@
   - [Detector v0.1](Detector_v0.1) -> Recognizes the exact pattern and super-patterns if they are outside the boundary set up by weights-grid.
   - [Detector v0.2](Detector_v0.2) -> Classifies the input as a sub-pattern, super-pattern, anti-pattern or equivalence precisely through a 2-POV logical analysis.
 
-- **`Version 1`**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check, takes us one step closer to self-learning adaptive machines.
+- **`Version 1`**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check and cybernetic feedback-driven adaptive learning. 
   - [Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold which can vary giving us ability to control the decision output.
+  - [Detector_v1.1](Detector_v1.1) -> Autonomously alters its decision boundary based on error feedback to correct its output.
 
 <p align="center">
   <img src="Detector_v1.0/images/Recognition.png" alt="Recognition" width="900">
 </p>
 
 <p align="center">
-  θ = 7 & M = 8, M > θ: hence Pattern is recognized ✅
+  Detector_v1.0, θ = 7 & M = 8, M > θ: hence Pattern is recognized ✅
 </p>
 
 <p align="center">
@@ -46,7 +47,7 @@
 </p>
 
 <p align="center">
-  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌
+  Detector_v1.0, θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized ❌
 </p>
 
 ## 🧠 Adaptive Learning Algorithms 
