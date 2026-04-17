@@ -1,4 +1,5 @@
 # 🔍 Gate Level Perceptron
+#### Stage 2 Complete: Cybernetic Adaptive Learning System
 
 - This project constructs a self-learning pattern recognition engine using discrete logic gates. Project evolves from strict boolean matching to score-based decision-making to feedback-driven adaptive learning system and further to eventually a Hardware perceptron.
 
