@@ -2,14 +2,14 @@
 
 - This project constructs a self-learning pattern recognition engine using discrete logic gates. Project evolves from strict boolean matching to score-based decision-making to feedback-driven adaptive learning and further to eventually a Hardware perceptron.
 
-- `Progress:`Implemented a hardware-level binary classifier, transitioning from strict Boolean matching to threshold-based decision logic capable of its decision boundary alteration, laying the foundation for feedback-driven adaptive learning and a pre-requisite for generalization.
+- `Progress:`Implemented a Cybernetic feedback-driven adaptive learning binary-classifier that based on error input autonomously alter its decision boundary by implementing Max-Initialized Decremental Search (MIDS) and resets the control loop for repeated adaptive cycles.
 
 <p align="center">
   <img src="Detector_v1.1/Max-Initialized%20Decremental%20Search/Videos/Cybernetic%20Feedback-Driven%20Adaptive%20Learning.gif" alt="Block Diagram" width="1500">
 </p>
 
 <p align="center">
-  🤖 Cybernetic self-learning system in action: Starting from an incorrect classification, the system initiates MIDS traversal, autonomously adjusts its threshold, flips the decision at the correct boundary (θ = M−1), and halts in a stable state. The system then resets its control logic, enabling repeated adaptive cycles.
+  🤖 Cybernetic self-learning system in action implementing MIDS algorithm
 </p>
 
 ## ⚙️ Implementation Stack
