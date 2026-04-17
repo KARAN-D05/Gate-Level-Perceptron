@@ -1,6 +1,6 @@
 # 🔍 Gate Level Perceptron
 
-- This project constructs a self-learning pattern recognition engine using discrete logic gates. Project evolves from strict boolean matching to score-based decision-making to feedback-driven adaptive learning and further to eventually a Hardware perceptron.
+- This project constructs a self-learning pattern recognition engine using discrete logic gates. Project evolves from strict boolean matching to score-based decision-making to feedback-driven adaptive learning system and further to eventually a Hardware perceptron.
 
 - `Progress:`Implemented a Cybernetic feedback-driven adaptive learning binary-classifier that based on error input autonomously alter its decision boundary by implementing [Max-Initialized Decremental Search](Detector_v1.1/Max-Initialized%20Decremental%20Search) (MIDS) and resets the control loop for repeated adaptive cycles.
 
