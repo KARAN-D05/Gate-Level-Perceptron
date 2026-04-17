@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  🧩 Block-Diagram - Detector_v1.0 (Alterable Decision Boundary)
+  🤖 Cybernetic self-learning system in action: Starting from an incorrect classification, the system initiates MIDS traversal, autonomously adjusts its threshold, flips the decision at the correct boundary (θ = M−1), and halts in a stable state. The system then resets its control logic, enabling repeated adaptive cycles.
 </p>
 
 ## ⚙️ Implementation Stack
