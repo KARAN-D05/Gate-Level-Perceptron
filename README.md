@@ -19,7 +19,7 @@
 ## 📈 Planned Progression
 - **Stage 0 (v0.x)**: Strict Boolean pattern relation analyzer. No learning, no noise tolerance, decision boundaries fixed by structural wiring.
 - **Stage 1 (v1.0)**: Popcount based similarity and a variable threshold to alter the decision boundary. Introduces noise tolerance and ability to change the decision output without structural changes.
-- **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System alters its own decision boundary based on external feedback to correct its decision output.
+- **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System alters its decision boundary based on external feedback to correct its decision output.
    - [MIDS Algorithm](Detector_v1.1/Max-Initialized%20Decremental%20Search)  **`⟵ DEVELOPED`**
    - [SATU Algorithm ](Detector_v1.1/State%20Aware%20Threshold%20Update) `⟵ NEXT`
 - **Stage 3 (v2.x)**: A System that generalizes on training data and based on that makes decisions about unseen data.
@@ -32,8 +32,8 @@
 
 - **`Version 1`**: Pop-count based judgement against a variable Threshold instead of perfect equivalence check and cybernetic feedback-driven adaptive learning. 
   - [Detector_v1.0](Detector_v1.0) -> Recognizes the pattern if total number of matched pixels are greater than the set threshold which can vary giving us ability to control the decision output.
-  - [Detector_v1.1](Detector_v1.1) -> Autonomously alters its decision boundary based on error feedback to correct its output implementing algorithms optimzed for given hardware constraints.
-
+  - [Detector_v1.1](Detector_v1.1) -> A feedback-driven adaptive system that autonomously adjusts its decision boundary to correct its output, using algorithms optimized for hardware constraints.
+    
 <p align="center">
   <img src="Detector_v1.0/images/Recognition.png" alt="Recognition" width="900">
 </p>
