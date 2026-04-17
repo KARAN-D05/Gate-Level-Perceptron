@@ -9,7 +9,8 @@
 </p>
 
 <p align="center">
-  🤖 Cybernetic self-learning adaptive system implementing MIDS algorithm (Detector_v1.1)
+  🤖 Cybernetic adaptive learning system implementing MIDS algorithm (Detector_v1.1)
+              Autonomously altering its decision boundary
 </p>
 
 ## ⚙️ Implementation Stack
