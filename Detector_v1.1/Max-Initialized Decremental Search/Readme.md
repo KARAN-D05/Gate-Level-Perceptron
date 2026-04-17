@@ -23,6 +23,23 @@ No incrementer, no thinking module, no state awareness required.
 **Tradeoff:** Simplicity and minimal area at the cost of 
 correction speed.
 
+<p align="center">
+  <img src="Videos/Cybernetic%20Feedback%20Driven%20Adaptive%20Learning.gif" alt="Adaptive Learning Demonstration" width="1500">
+</p>
+
+<p align="center">
+  🤖 Cybernetic self-learning adaptive system implementing MIDS algorithm
+      1) Initial State θ = 12, M = 8, M < θ, Recogntion -> 0
+      2) Error_In pressed to signal error to the system
+      3) System takes over control and starts inmplementing MIDS, initialize to 15 and decrements until output correction
+      4) At θ = 7, M > θ, output flips, Recognition becomes 1, system converges and is stable at M > θ = 7, success flag goes high indicating successfull convergence
+      5) As soon as convergence occurs, the system is rearmed for next correction sequence automatically 
+      6) The correction success flag is manually cleared before next correction so we can track correction have occurred and it works as a visual aid
+      7) Now system is stable at M = 8, θ = 7, Recogntion -> 1.
+      8) We again press Error_In for another adaptive cycle and system again starts MIDS and initialize to 15 making θ > M instantly acheiving non-recognition
+      9) This instant correction demonstrated initialization bias of MIDS for correction of false-positives 
+</p>
+
 ## 🎛️ Initialization Bias
 The system activation function R(M, θ) = 1 if M > θ, else 0 creates an inherent asymmetry that interacts with the algorithm's starting state.
 
