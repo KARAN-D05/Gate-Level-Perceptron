@@ -5,7 +5,7 @@
 - `Progress:`Implemented a Cybernetic feedback-driven adaptive learning binary-classifier that based on error input autonomously alter its decision boundary by implementing [Max-Initialized Decremental Search](Detector_v1.1/Max-Initialized%20Decremental%20Search) (MIDS) and resets the control loop for repeated adaptive cycles.
 
 <p align="center">
-  <img src="Detector_v1.1/Max-Initialized%20Decremental%20Search/Videos/Cybernetic%20Feedback-Driven%20Adaptive%20Learning.gif" alt="Block Diagram" width="1500">
+  <img src="Detector_v1.1/Max-Initialized%20Decremental%20Search/Videos/Cybernetic%20Feedback-Driven%20Adaptive%20Learning.gif" alt="Adaptive Learning Demonstration" width="1500">
 </p>
 
 <p align="center">
