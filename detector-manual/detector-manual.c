@@ -1,12 +1,6 @@
 // ============================================================
 //  detector-manual.c
 // ------------------------------------------------------------
-//  When you build your own hardware, you build your own rules.
-//  This machine does not follow any existing pattern detection
-//  standard. It was designed from scratch, evolving from a
-//  simple binary pixel filter into a scoring-based detector
-//  isomorphic to the McCulloch-Pitts Neuron.
-//
 //  This program is that reference. A manual baked directly
 //  into the toolchain so the detector architecture is always
 //  one command away, no browser, no file explorer, just run
