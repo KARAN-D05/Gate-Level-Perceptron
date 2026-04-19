@@ -22,7 +22,7 @@
 - **Stage 1 (v1.0)**: Popcount based similarity and a variable threshold to alter the decision boundary. Introduces noise tolerance and ability to change the decision output without structural changes.
 - **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System alters its decision boundary based on external feedback to correct its decision output.
    - [MIDS Algorithm](Detector_v1.1/Max-Initialized%20Decremental%20Search)  **`⟵ DEVELOPED`**
-   - [SATU Algorithm ](Detector_v1.1/State%20Aware%20Threshold%20Update) `⟵ NEXT`
+   - [SATU Algorithm ](Detector_v1.1/State%20Aware%20Threshold%20Update) 
 - **Stage 3 (v2.x)**: A System that generalizes on training data and based on that makes decisions about unseen data.
 
 ## 🧱 Versions Built
