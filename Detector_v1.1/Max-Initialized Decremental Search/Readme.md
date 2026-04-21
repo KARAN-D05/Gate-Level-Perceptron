@@ -1,26 +1,24 @@
 #  📉 Max-Initialized Decremental Search (MIDS)
 
-MIDS is a blind, state-unaware threshold correction algorithm that 
+- MIDS is a blind, state-unaware threshold correction algorithm that 
 guarantees convergence through exhaustive decremental search.
-
-On receiving an error signal, MIDS does not evaluate the current 
+- On receiving an error signal, MIDS does not evaluate the current 
 output state or reason about the desired state. Instead it follows 
 a fixed procedure: reset the threshold to its maximum value (15) 
 and begin decrementing by 1 each clock cycle until the output 
 reverses and correction is achieved.
-
-The core insight is that starting from maximum coverage guarantees 
+- The core insight is that starting from maximum coverage guarantees 
 the search will encounter the correction boundary regardless of 
 where it lies. No decision logic, no state comparison, just a 
 bounded search from ceiling to correction.
 
-**Complexity:** O(N) - worst case 15 clock cycles if correction 
+- **Complexity:** O(N) - worst case 15 clock cycles if correction 
 occurs at threshold 0.
 
-**Hardware:** Minimal - a decrementer and a cell pointer. 
+- **Hardware:** Minimal - a decrementer and a cell pointer. 
 No incrementer, no thinking module, no state awareness required.
 
-**Tradeoff:** Simplicity and minimal area at the cost of 
+- **Tradeoff:** Simplicity and minimal area at the cost of 
 correction speed.
 
 <p align="center">
@@ -49,13 +47,10 @@ correction speed.
 ```
 
 ## 🎛️ Initialization Bias
-The system activation function R(M, θ) = 1 if M > θ, else 0 creates an inherent asymmetry that interacts with the algorithm's starting state.
-
-MIDS initializes θ = 15 which ensures M > θ is false for all valid M ≤ 15 , yielding a default output of 0 (Non-Recognition) for all M ∈ {0, ..., 15}. Consequently, any error requiring non-recognition output is corrected with zero latency - a strong bias towards caution resulting in instant correction for false positives while recognition requires traversal to θ = M - 1 with latency 15 - (M - 1). Preferable in systems where false positives must be corrected with zero latency.
-
-Conversely, if we initialize θ = 0 (LIDS, Least-initialized decremental search), it produces a default output of 1 (Recognition) for all M ∈ {1, ..., 15}, a strong bias towards eagerness and instant correction of false negatives. Preferable in systems where false negatives must be corrected with zero latency.
-
-Formally, the Bias manifests as a subset of inputs for whcih correction latency is O(1) rather than worst case O(N).
+- The system activation function R(M, θ) = 1 if M > θ, else 0 creates an inherent asymmetry that interacts with the algorithm's starting state.
+- MIDS initializes θ = 15 which ensures M > θ is false for all valid M ≤ 15 , yielding a default output of 0 (Non-Recognition) for all M ∈ {0, ..., 15}. Consequently, any error requiring non-recognition output is corrected with zero latency - a strong bias towards caution resulting in instant correction for false positives while recognition requires traversal to θ = M - 1 with latency 15 - (M - 1). Preferable in systems where false positives must be corrected with zero latency.
+- Conversely, if we initialize θ = 0 (LIDS, Least-initialized decremental search), it produces a default output of 1 (Recognition) for all M ∈ {1, ..., 15}, a strong bias towards eagerness and instant correction of false negatives. Preferable in systems where false negatives must be corrected with zero latency.
+- Formally, the Bias manifests as a subset of inputs for whcih correction latency is O(1) rather than worst case O(N).
 
 ## 🎯 Convergence Proof
 ```
