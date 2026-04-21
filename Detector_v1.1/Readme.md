@@ -14,7 +14,6 @@
 | Direction | Always starts from max, decrements | Sets to M or M-1 as needed |
 | Initialization Bias | Instant correction for false positives | None |
 | Hardware Complexity | Low - decrementer only | Higher - decrementer + decision logic |
-| Area | Minimal | Larger |
 | Guaranteed Convergence | Yes | Yes |
 
 ## 🎯 Convergence Proofs
