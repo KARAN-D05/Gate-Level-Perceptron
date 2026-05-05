@@ -40,7 +40,7 @@
 </p>
 
 <p align="center">
- 🧩 Block Diagram - Detector_v1.0 (Manually Alterable Decision Boundary)
+  <sub></b> 🧩 Block Diagram - Detector_v1.0 (Manually Alterable Decision Boundary)
 </p>
 
 ## 🧠 Adaptive Learning Algorithms 
@@ -65,7 +65,7 @@
 </p>
 
 <p align="center">
-  ⏱️ Correction Speed Complexity Comparison
+   <sub></b> ⏱️ Correction Speed Complexity Comparison
 </p>
 
 ## 💻 Verilog Implementation
@@ -77,7 +77,7 @@
     <img src="Detector_v0.0/Verilog-Implementation/images/Waveform.png" 
          alt="Pattern Detector Output" 
          width="1500">
-    <p> Equivalence & Sub-Pattern Recognition 🔹 </p>
+     <sub></b> <p> Equivalence & Sub-Pattern Recognition 🔹 </p>
 </div>
 
 - [Detector_v0.1](Detector_v0.1/Verilog-Implementation)
