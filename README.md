@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-   <br>
   🤖 Adaptive learning system implementing MIDS algorithm
 </p>
 
