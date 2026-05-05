@@ -13,7 +13,7 @@
   🤖 Cybernetic adaptive learning system implementing MIDS algorithm (Detector_v1.1) 
 </p>
 
-🐾 [Execution Trace for System above Implementing MIDS for Autonomous Decision Boundary Adjustment](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/Max-Initialized%20Decremental%20Search#-execution-trace)
+🐾 [Refer Execution Trace](https://github.com/KARAN-D05/Gate-Level-Perceptron/tree/main/Detector_v1.1/Max-Initialized%20Decremental%20Search#-execution-trace)
 
 ## ⚙️ Implementation Stack
 ![Verilog](https://img.shields.io/badge/Verilog-FFEA00?style=for-the-badge&logoColor=black)
