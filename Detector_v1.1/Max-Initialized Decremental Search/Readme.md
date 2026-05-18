@@ -26,7 +26,7 @@ correction speed.
 </p>
 
 <p align="center">
-  🤖 Cybernetic self-learning adaptive system implementing MIDS algorithm [16Hz Clock]
+  🤖 Cybernetic self-learning adaptive system implementing MIDS algorithm - Operating at 16 Hz Clock and autonomously altering its decision boundary while detecting and supressing the timing hazard
 </p>
 
 ```
