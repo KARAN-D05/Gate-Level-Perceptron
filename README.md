@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-   <sub></b> 🤖 Adaptive learning system implementing MIDS algorithm - Operating at 16 Hz Clock and autonomously altering its decision boundary while detecting and supressing the timing hazard
+   <sub></b> 🤖 Adaptive learning system implementing MIDS algorithm [16 Hz Clock]
 </p>
 
 ## ⚙️ Implementation Stack
