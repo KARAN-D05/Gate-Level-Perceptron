@@ -1,5 +1,3 @@
-# System Organization and Interfacing
-
 ## Top Level Pins
 Pins required to program the threshold memory storage and interact with the system.
 
