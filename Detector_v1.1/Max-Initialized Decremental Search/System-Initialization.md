@@ -1,4 +1,4 @@
-### Programming The Memory
+## Programming The Memory
 
 - Press Error_In to start the down counter sequence and manually pulse the clock for each address which is visble via threshold pointer.
 
@@ -16,7 +16,7 @@
 
 - Make Clear Success Flag pin and Clear Convergence Detectors Pin low.
 
-### Using the System
+## Using the System
 
 - Enter and input and reference pattern on the respective grids and turn on the clock.
 
