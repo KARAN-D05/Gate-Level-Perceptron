@@ -1,4 +1,4 @@
-# 🔁 Cybernetic Adaptive Learning System
+# 🔁 Gate-Level Cybernetic Classifier
 
 - `Progress:`Implemented a feedback-driven adaptive learning binary-classifier that based on error input autonomously alter its decision boundary by implementing [Max-Initialized Decremental Search](Detector_v1.1/Max-Initialized%20Decremental%20Search) (MIDS) and resets the control loop for repeated adaptive cycles.
 
@@ -106,7 +106,7 @@
 </div>
 
 ## 🛠️Current Development:
-- Feedback-driven adaptive learning system implementing MIDS algorithm Developed✓
+- Stage 2 in progress - MIDS: Developed ✓ | SATU: In Development
 
 ## ⬇️ Download This Repository
 
