@@ -11,7 +11,7 @@
 // ------------------------------------------------------------
 //  Project  : Gate Level Perceptron - Pattern Detector
 //  File     : detector-manual.c
-//  Covers   : Detector-V0.0, V0.1, V0.2, V1.0, V1.1
+//  Covers   : Detector-V0.0, V0.1, V0.2, V1.0
 //  Author   : Karan Diwan
 //  Date     : 2026
 // ============================================================
@@ -82,10 +82,10 @@ void print_iso(char *left, char *right) {
 // ─────────────────────────────────────────
 
 typedef struct {
-    char name[40];
+    char name[30];
     char version[20];
-    char function[400];
-    char note[400];
+    char function[300];
+    char note[300];
 } Component;
 
 Component components[] = {
@@ -145,19 +145,19 @@ Component components[] = {
     },
     {
         "Population Counter",
-        "V1.0+",
+        "V1.0",
         "Counts total number of matched pixels M. Built from 64 half-adders.",
         "8 HA split 16 inputs into 8 SUM bits weight 1 and 8 CARRY bits weight 2. Successive compression until single bit per weight. Wallace Tree for parallel faster reduction."
     },
     {
         "Threshold",
-        "V1.0+",
+        "V1.0",
         "Configurable threshold theta set via T-pins. Range: 0 (0000) to 15 (1111).",
         "T-pins are T8 T4 T2 T1. Example: 1001 sets threshold to 9. Pattern recognized only if M strictly greater than theta."
     },
     {
         "MCP Neuron",
-        "V1.0+",
+        "V1.0",
         "McCulloch-Pitts Neuron. Sums binary inputs M = A + B and fires if M >= theta.",
         "XNOR inputs = Dendrites | Pop-counter = Cell Body | Decision Maker = Signal firing | Output LED = Axon."
     },
@@ -187,61 +187,13 @@ Component components[] = {
     },
     {
         "Half Adder",
-        "V1.0+",
+        "V1.0",
         "Basic building block of the population counter. Has SUM and CARRY outputs.",
         "If weight of input is W, SUM output has weight W and CARRY output has weight 2W. 64 half-adders make the full population counter."
     },
-    {
-        "MIDS",
-        "V1.1",
-        "Max-Initialized Decremental Search. Blind state-unaware threshold correction algorithm. Resets theta to 15 and decrements until output flips.",
-        "Complexity O(N). Hardware: decrementer only. Initialization bias: instant correction for false positives. Guaranteed convergence via exhaustive traversal of threshold space."
-    },
-    {
-        "SATU",
-        "V1.1",
-        "State Aware Threshold Update. Directly computes required threshold from M in a single clock cycle.",
-        "Complexity O(1). Sets theta=M for non-recognition or theta=M-1 for recognition. No initialization bias. Requires decrementer + decision logic. Guaranteed convergence in one step."
-    },
-    {
-        "Decision Flipping Space",
-        "V1.1",
-        "DFS: the set of threshold values that flip the output for a given M. DFS+(M)=M-1 flips to recognition. DFS-(M)=M flips to non-recognition.",
-        "DFS+(M) in {0..14} and DFS-(M) in {1..15}, both subsets of threshold range {0..15}. Valid for all M in {1..15}. Basis of convergence proof for both MIDS and SATU."
-    },
-    {
-        "Initialization Bias",
-        "V1.1",
-        "MIDS starts at theta=15 giving default output 0. Any false positive corrected with zero latency. Recognition requires traversal to theta=M-1.",
-        "LIDS (Least-Initialized) starts at theta=0 giving default output 1. Any false negative corrected with zero latency. Bias is a subset of inputs with O(1) latency rather than worst-case O(N)."
-    },
-    {
-        "Hazard Detection",
-        "V1.1",
-        "Autonomous mechanism detecting timing glitches during correction traversal. Two convergence detectors firing simultaneously signals a glitch.",
-        "Normal: only one detector fires per cycle. Glitch: both detectors fire simultaneously. Response: reset both detectors and continue traversal. Hazard Detected and Hazard Nullified indicators light briefly. Self-recovering, no user intervention required."
-    },
-    {
-        "Convergence Detector",
-        "V1.1",
-        "Two detectors in the correction circuit. One fires on 0->1 output transition, the other on 1->0. Only one fires per correct correction cycle.",
-        "Both firing simultaneously is the glitch signature. Used by hazard detection and suppression mechanism. Also signals successful correction to raise the CORRECTION indicator."
-    },
-    {
-        "Error Signal",
-        "V1.1",
-        "External input Error_In that triggers the adaptive correction sequence in V1.1.",
-        "Pressing Error_In starts the MIDS or SATU correction sequence. After convergence the CORRECTION indicator goes high and threshold control returns to user. Clear Success Flag to rearm for next adaptation cycle."
-    },
-    {
-        "Activation Function",
-        "V1.1",
-        "R(M, theta) = 1 if M > theta, else 0. Strict inequality creates asymmetry exploited by SATU to eliminate the incrementer.",
-        "Non-recognition->Recognition requires theta = M-1 (decrement). Recognition->Non-recognition requires theta = M (direct load). No incrementer ever needed. Reduces gate count and simplifies control FSM."
-    },
 };
 
-int component_count = 25;
+int component_count = 17;
 
 // ─────────────────────────────────────────
 // SEARCH HELPER
@@ -271,13 +223,13 @@ void search(char *query) {
     print_divider();
 
     for (int i = 0; i < component_count; i++) {
-        char name_upper[40];
-        char func_upper[400];
-        char note_upper[400];
+        char name_upper[30];
+        char func_upper[300];
+        char note_upper[300];
 
-        strncpy(name_upper, components[i].name,     39);  name_upper[39]  = '\0';
-        strncpy(func_upper, components[i].function, 399); func_upper[399] = '\0';
-        strncpy(note_upper, components[i].note,     399); note_upper[399] = '\0';
+        strncpy(name_upper, components[i].name,     29);  name_upper[29]  = '\0';
+        strncpy(func_upper, components[i].function, 299); func_upper[299] = '\0';
+        strncpy(note_upper, components[i].note,     299); note_upper[299] = '\0';
 
         to_upper(name_upper);
         to_upper(func_upper);
@@ -463,8 +415,7 @@ void manual_v10() {
     printf(BOLD_WHITE "   MCP Neuron model:\n" RESET);
     printf("     M = A + B  where A,B are in {0,1}\n");
     printf(CYAN "     M >= theta" RESET " -> Neuron Fires,        Output = 1\n");
-    printf(CYAN "     M <  theta" RESET " -> Neuron Doesn't Fire, Output = 0\n");
-    printf(BOLD_WHITE "   Logic gate implementation:\n" RESET);
+    printf(CYAN "     M <  theta" RESET " -> Neuron Doesn't Fire, Output = 0\n");    printf(BOLD_WHITE "   Logic gate implementation:\n" RESET);
     printf("     AND gate: theta = 2\n");
     printf("     OR  gate: theta = 1\n");
 
@@ -515,217 +466,12 @@ void manual_v10() {
     print_section("THRESHOLD EXAMPLES");
     printf(GREEN "   theta=7, M=8 : M > theta  -> " RESET "Pattern RECOGNIZED\n");
     printf(YELLOW "   theta=9, M=8 : M <= theta -> " RESET "Pattern NOT RECOGNIZED\n");
-
     print_section("PROOF OF CONCEPT");
     printf("   Instead of perfect equivalence, we judge based on\n");
     printf("   score M vs threshold theta. A self-learning machine\n");
     printf("   could adjust theta automatically via feedback until\n");
     printf("   it converges to a value that correctly classifies\n");
     printf("   input patterns.\n");
-
-    printf("\n");
-    print_divider();
-}
-
-void manual_v11() {
-    printf("\n");
-    print_header("Detector-V1.1 - Feedback-Driven Adaptive Learning");
-
-    print_section("OVERVIEW");
-    printf(" Introduces feedback-driven adaptation on top of V1.0,\n");
-    printf(" a popcount based judgement system with manually\n");
-    printf(" alterable decision boundary.\n");
-    printf(" Automatic threshold adjustment based on error signal\n");
-    printf(" allows the detector to gradually converge towards an\n");
-    printf(" appropriate threshold to correct the recognition output.\n");
-    printf(" Forms the basis of a cybernetic self-learning adaptive\n");
-    printf(" system capable of altering its decision boundaries.\n");
-
-    print_section("ACTIVATION FUNCTION");
-    printf(" R(M, theta) = 1 if M > theta, else 0\n");
-    printf(" Strict inequality creates asymmetry used by SATU\n");
-    printf(" to eliminate the incrementer entirely.\n");
-    printf("\n");
-    printf(BOLD_WHITE "   Transition          Required Condition    Hardware Action\n" RESET);
-    printf(DIM "   ─────────────────────────────────────────────────────\n" RESET);
-    printf("   Non-Recog -> Recog   M > theta true        theta = M - 1\n");
-    printf("   Recog -> Non-Recog   M > theta false        theta = M\n");
-    printf("\n");
-    printf(DIM "   No incrementer needed at any point.\n" RESET);
-
-    print_section("DECISION FLIPPING SPACE (DFS)");
-    printf(" For a given M, the Decision Flipping Space is:\n\n");
-    printf(CYAN "   DFS+(M)" RESET " = M - 1  -> threshold that flips to Recognition\n");
-    printf(CYAN "   DFS-(M)" RESET " = M      -> threshold that flips to Non-Recognition\n\n");
-    printf("   DFS+(M) = M-1 in {0,1,...,14} <= {0,...,15}\n");
-    printf("   DFS-(M) = M   in {1,2,...,15} <= {0,...,15}\n\n");
-    printf(GREEN "   => Valid DFS always exists for all M in {1,...,15}.\n" RESET);
-    printf(DIM "   Edge cases: M=0 always non-recognition, no flip.\n" RESET);
-    printf(DIM "               M=16 always recognition, no flip.\n" RESET);
-
-    print_section("ADAPTIVE LEARNING ALGORITHMS");
-
-    printf("\n");
-    printf(DIM "   Property             MIDS                    SATU\n" RESET);
-    printf(DIM "   ─────────────────────────────────────────────────────\n" RESET);
-    printf("   Correction Speed   " CYAN "  O(N)                   O(1)\n" RESET);
-    printf("   State Awareness      None                    Current & desired\n");
-    printf("   Direction            Max -> 0 always         Sets M or M-1\n");
-    printf("   Initialization Bias  Instant false+ correct  None\n");
-    printf("   Hardware Complexity  Low (decrementer only)  Higher (+ decision)\n");
-    printf("   Guaranteed Converge  Yes                     Yes\n");
-
-    // ── MIDS ──────────────────────────────────────────────
-    print_component(1, "MIDS - Max-Initialized Decremental Search");
-    printf("     Blind, state-unaware threshold correction.\n");
-    printf("     On error: reset theta to 15, decrement by 1\n");
-    printf("     each clock cycle until output flips.\n");
-    printf("     Core insight: starting from max guarantees the\n");
-    printf("     search hits the correction boundary regardless\n");
-    printf("     of where it lies. No decision logic required.\n\n");
-    printf(CYAN "     Complexity : " RESET "O(N) - worst case 15 cycles at theta=0\n");
-    printf(CYAN "     Hardware   : " RESET "Decrementer + cell pointer only\n");
-    printf(CYAN "     Tradeoff   : " RESET "Minimal area, slower correction\n");
-
-    printf("\n" BOLD_WHITE "     Initialization Bias:\n" RESET);
-    printf("       theta=15 => M > theta is false for all valid M.\n");
-    printf("       Default output: 0 (Non-Recognition).\n");
-    printf(GREEN "       False positive corrected with zero latency.\n" RESET);
-    printf("       Recognition requires traversal to theta = M-1.\n");
-    printf("       Latency: 15 - (M - 1) cycles.\n");
-    printf(DIM "       Preferable when false positives must be\n" RESET);
-    printf(DIM "       corrected with zero latency.\n" RESET);
-    printf("\n");
-    printf("       LIDS (Least-Initialized): theta=0 => default=1.\n");
-    printf(GREEN "       False negative corrected with zero latency.\n" RESET);
-    printf(DIM "       Preferable when false negatives must be\n" RESET);
-    printf(DIM "       corrected with zero latency.\n" RESET);
-    printf("\n");
-    printf("       Formally: bias is the subset of inputs where\n");
-    printf("       correction latency is O(1) not worst-case O(N).\n");
-
-    printf("\n" BOLD_WHITE "     Convergence Proof:\n" RESET);
-    printf("       MIDS operates as: theta(n+1) = theta(n) - 1\n");
-    printf("       starting from theta = 15.\n");
-    printf("       Generates strictly decreasing sequence:\n");
-    printf("         15 -> 14 -> ... -> 0\n\n");
-    printf("       Since theta traverses all values in [15->0]\n");
-    printf("       and DFS+(M), DFS-(M) are subsets of {0,...,15},\n");
-    printf("       MIDS is guaranteed to hit the required flipping\n");
-    printf("       threshold in finite steps.\n");
-    printf(GREEN "       => MIDS always converges.\n" RESET);
-    printf("       Worst-case: flipping threshold at theta=0 => O(N).\n");
-
-    // ── SATU ──────────────────────────────────────────────
-    print_component(2, "SATU - State Aware Threshold Update");
-    printf("     State-aware correction in a single clock cycle.\n");
-    printf("     On error: point directly to cell = M. Thinking\n");
-    printf("     module evaluates current vs desired output,\n");
-    printf("     sets theta = M (non-recognition) or M-1 (recognition).\n");
-    printf("     Result: immediate boundary correction, one step.\n\n");
-    printf(CYAN "     Complexity : " RESET "O(1) - always one clock cycle\n");
-    printf(CYAN "     Hardware   : " RESET "Decrementer + cell pointer + thinking module\n");
-    printf(CYAN "     Tradeoff   : " RESET "Maximum speed, higher hardware complexity\n");
-
-    printf("\n" BOLD_WHITE "     Initialization Bias:\n" RESET);
-    printf("       None. Directly computes required threshold from M.\n");
-    printf("       theta = M   => non-recognition\n");
-    printf("       theta = M-1 => recognition\n");
-    printf("       Both states achieved in O(1), independent of\n");
-    printf("       any starting state.\n");
-    printf(DIM "       Suitable when balanced and immediate correction\n" RESET);
-    printf(DIM "       is required without preference to either error.\n" RESET);
-
-    printf("\n" BOLD_WHITE "     Convergence Proof:\n" RESET);
-    printf("       SATU operates as:\n");
-    printf("         theta(n+1) = M-1  if recognition desired\n");
-    printf("         theta(n+1) = M    if non-recognition desired\n\n");
-    printf("       theta(n+1) is directly computed as DFS+(M) or\n");
-    printf("       DFS-(M), both subsets of {0,...,15}.\n");
-    printf("       SATU directly assigns the required flipping\n");
-    printf("       threshold in a single step.\n");
-    printf(GREEN "       => SATU always converges in exactly one step.\n" RESET);
-
-    printf("\n" BOLD_WHITE "     Strict Inequality Advantage:\n" RESET);
-    printf("       R(M,theta)=1 iff M > theta creates asymmetry:\n");
-    printf("         Recog needs theta < M => theta = M-1 (decrement)\n");
-    printf("         Non-recog needs theta >= M => theta = M (load)\n");
-    printf("       No case requires incrementing beyond M.\n");
-    printf(GREEN "       => Incrementer eliminated entirely.\n" RESET);
-    printf("       Before: Incrementer + Decrementer + direction FSM\n");
-    printf("       After : Decrementer + Load(M) / Load(M-1) MUX\n");
-    printf(DIM "       Reduced gate count, simplified control logic,\n" RESET);
-    printf(DIM "       no loss of functionality.\n" RESET);
-
-    // ── SYSTEM USAGE ──────────────────────────────────────
-    print_section("PROGRAMMING THE MEMORY (MIDS)");
-    printf("   1. Press Error_In to start down counter sequence.\n");
-    printf("      Pulse clock manually for each address (visible\n");
-    printf("      via threshold pointer).\n");
-    printf("   2. Set Clear Success Flag and Clear Convergence\n");
-    printf("      Detectors high to prevent premature firing.\n");
-    printf("   3. Set MEM_P_EN and E0W1 high to connect D-pins\n");
-    printf("      (D1 D2 D4 D8) to memory cell bus, enable write.\n");
-    printf("   4. For MIDS: store address value in each cell.\n");
-    printf("      e.g. store 15 in cell at address 15.\n");
-    printf("   5. Pulse clock once per address: 15 -> 14 -> ... -> 0.\n");
-    printf("   6. Set MEM_P_EN and E0W1 low.\n");
-    printf("   7. Press M_L_RST to reset down counter (not M_RST\n");
-    printf("      which resets the threshold memory).\n");
-    printf("   8. Set Clear Success Flag and Clear Convergence\n");
-    printf("      Detectors low.\n");
-
-    print_section("USING THE SYSTEM");
-    printf("   1. Enter input and reference patterns on grids,\n");
-    printf("      turn on clock.\n");
-    printf("   2. Load any theta via T-Pins T8 T4 T2 T1, press M_TL.\n");
-    printf("   3. Pop Counter counts matched pixels M.\n");
-    printf("   4. System computes R(M,theta) = 1 if M>theta, else 0.\n");
-    printf("   5. If output requires correction: press Error_In.\n");
-    printf("      System autonomously runs correction sequence.\n");
-    printf("   6. CORRECTION indicator goes high on convergence.\n");
-    printf("      Threshold control returns to user.\n");
-    printf("   7. Clear Success Flag to rearm for next cycle.\n");
-
-    print_section("SYSTEM INDICATORS");
-    printf(CYAN "   Indicator           State   Meaning\n" RESET);
-    printf(DIM "   ─────────────────────────────────────────────────────\n" RESET);
-    printf(GREEN "   RECOGNITION         HIGH  " RESET "  M > theta, recognized\n");
-    printf(YELLOW "   RECOGNITION         LOW   " RESET "  M <= theta, not recognized\n");
-    printf(GREEN "   CORRECTION          HIGH  " RESET "  Correction sequence done\n");
-    printf(YELLOW "   Hazard Detected     HIGH  " RESET "  Timing glitch detected\n");
-    printf(GREEN "   Hazard Nullified    HIGH  " RESET "  Glitch suppressed, continuing\n");
-
-    print_section("HAZARD DETECTION AND SUPPRESSION");
-    printf("   Two convergence detectors run during correction:\n");
-    printf("   one fires on 0->1 transition, one on 1->0.\n\n");
-    printf(BOLD_WHITE "   Normal signature:\n" RESET);
-    printf("     Only one detector fires per correction cycle.\n");
-    printf(BOLD_WHITE "   Glitch signature:\n" RESET);
-    printf("     Timing glitch causes 1->0->1 or 0->1->0 spike\n");
-    printf("     within a single clock cycle. Both detectors fire\n");
-    printf("     simultaneously. Structurally impossible normally.\n");
-    printf(BOLD_WHITE "   Detection criterion:\n" RESET);
-    printf("     Both detectors active simultaneously = glitch.\n");
-    printf(BOLD_WHITE "   Suppression:\n" RESET);
-    printf("     Reset both detectors and detection state.\n");
-    printf("     Continue traversal from current threshold.\n");
-    printf("     No user intervention required.\n");
-    printf(DIM "     Hazard Detected and Hazard Nullified indicators\n" RESET);
-    printf(DIM "     light briefly - expected behavior, not failure.\n" RESET);
-    printf(GREEN "\n   Result: Correct flipping threshold reached despite\n" RESET);
-    printf(GREEN "   the glitch. System self-recovers.\n" RESET);
-
-    print_section("EDGE CASES AND SYSTEM BOUNDARIES");
-    printf(YELLOW "   M = 0  " RESET ": Always non-recognition. No corrective\n");
-    printf("           boundary exists. Correction to recognition\n");
-    printf("           is not possible or meaningful.\n");
-    printf(YELLOW "   M = 16 " RESET ": Always recognition (theta max = 15).\n");
-    printf("           Correction to non-recognition requires\n");
-    printf("           theta >= 16, outside threshold space.\n");
-    printf("           System will not converge - correct by design.\n");
-    printf(GREEN "   Valid  " RESET ": M in {1,...,15}. DFS exists in threshold\n");
-    printf("           range. Both MIDS and SATU guaranteed to converge.\n");
 
     printf("\n");
     print_divider();
@@ -738,13 +484,11 @@ void manual_all() {
     printf(CYAN "  V0.1" RESET " -> Fixes V0.0, super-pattern recognition\n");
     printf(CYAN "  V0.2" RESET " -> Four-way classifier combining both POVs\n");
     printf(CYAN "  V1.0" RESET " -> POP-Count, threshold-based, MCP Neuron\n");
-    printf(CYAN "  V1.1" RESET " -> Feedback-driven adaptive learning, MIDS & SATU\n");
     printf(DIM "\n Showing all versions...\n" RESET);
     manual_v00();
     manual_v01();
     manual_v02();
     manual_v10();
-    manual_v11();
 }
 
 // ─────────────────────────────────────────
@@ -780,7 +524,6 @@ int main(int argc, char *argv[]) {
                CYAN "V0.1" RESET " | "
                CYAN "V0.2" RESET " | "
                CYAN "V1.0" RESET " | "
-               CYAN "V1.1" RESET " | "
                CYAN "all"  RESET " | "
                CYAN "search" RESET " | "
                CYAN "exit" RESET "\n");
@@ -795,8 +538,6 @@ int main(int argc, char *argv[]) {
             manual_v02();
         } else if (strcmp(input, "V1.0") == 0 || strcmp(input, "v1.0") == 0) {
             manual_v10();
-        } else if (strcmp(input, "V1.1") == 0 || strcmp(input, "v1.1") == 0) {
-            manual_v11();
         } else if (strcmp(input, "all") == 0) {
             manual_all();
         } else if (strcmp(input, "search") == 0) {
@@ -809,7 +550,7 @@ int main(int argc, char *argv[]) {
             break;
         } else {
             printf(BOLD_RED "\n [ERROR]" RESET " Unknown input '%s'\n", input);
-            printf(DIM " Try: V0.0, V0.1, V0.2, V1.0, V1.1, all, search, exit\n" RESET);
+            printf(DIM " Try: V0.0, V0.1, V0.2, V1.0, all, search, exit\n" RESET);
         }
     }
 
