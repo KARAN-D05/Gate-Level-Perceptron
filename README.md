@@ -1,5 +1,4 @@
-# 🔍 Gate Level Perceptron
-## 🔁 Stage 2: Cybernetic Adaptive Learning System
+# 🔁 Cybernetic Adaptive Learning System
 
 - This project constructs a self-learning pattern recognition engine using discrete logic gates. Project will evolve from strict boolean matching to score-based decision-making to feedback-driven adaptive learning system and further to eventually a Hardware perceptron.
 
@@ -23,7 +22,6 @@
 - **Stage 2 (v1.1)**: Cybernetic Feedback-driven adaptive learning. System alters its decision boundary based on external feedback to correct its decision output.
    - [MIDS Algorithm](Detector_v1.1/Max-Initialized%20Decremental%20Search)  **`⟵ DEVELOPED`**
    - [SATU Algorithm ](Detector_v1.1/State%20Aware%20Threshold%20Update) 
-- **Stage 3 (v2.x)**: A System that generalizes on training data and based on that makes decisions about unseen data.
 
 ## 🧱 Versions Built
 - **`Version 0`**: A pattern relation analyzer that classifies how an input pattern relates to a stored pattern, enforces rule based recognition rather than learning.
