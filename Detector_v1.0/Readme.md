@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  θ = 7 & M = 8, M > θ: hence Pattern is recognized
+  <sub></b> θ = 7 & M = 8, M > θ: hence Pattern is recognized
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
+  <sub></b> θ = 9 & M = 8, M ≤ θ: hence Pattern is not recognized
 </p>
 
 ## 👥 Population Counter
@@ -38,7 +38,7 @@
 </p>
 
 <p align="center">
- Wallace Tree Based Population Counter - Parallel & Faster Reduction of Multiple Bits
+ <sub></b> Wallace Tree Based Population Counter - Parallel & Faster Reduction of Multiple Bits
 </p>
 
 ## ⚖️ XNOR Equivalence Grid
