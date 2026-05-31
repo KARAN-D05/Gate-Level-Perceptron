@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Detector does not recognizes sub-pattern
+ <sub></b> Detector does not recognizes sub-pattern
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  Detector recognizes super-pattern
+ <sub></b> Detector recognizes super-pattern
 </p>
 
 ## 🔲Input Grid
@@ -53,7 +53,7 @@
 </p>
 
 <p align="center">
-  Detector recognizes equivalent pattern
+ <sub></b> Detector recognizes equivalent pattern
 </p>
 
 ## 🔮Next Version 
