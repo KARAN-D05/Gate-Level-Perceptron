@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Detector recognize alphabet T
+  <sub></b> Detector recognize alphabet T
 </p>
 
 
@@ -38,7 +38,7 @@
 </p>
 
 <p align="center">
-  Detector does not recognize super-pattern
+  <sub></b> Detector does not recognize super-pattern
 </p>
 
 <p align="center">
@@ -46,7 +46,7 @@
 </p>
 
 <p align="center">
-  Detector recognizes Sub-pattern
+  <sub></b> Detector recognizes Sub-pattern
 </p>
 
 ## ⚠️Limitations
