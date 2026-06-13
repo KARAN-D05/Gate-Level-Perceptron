@@ -87,7 +87,7 @@
 > M < θ -> Output = 0
 > ```
 - The difference in inequality reflects a stricter decision criterion in my system so it only activates when the match count exceeds the threshold, not when it is equal.
-- The correspondence was not explicitly designed but emergedc naturally from contructing threshold-based decision-making architecture.
+- The correspondence was not explicitly designed but emerged naturally from constructing threshold-based decision-making architecture.
 
 ## 💡One Step Closer to Self-Learning Machines.....
 - Instead of perfect equivalence check here we judge based on the score or the number of matched pixels, comparing them to a threshold.
